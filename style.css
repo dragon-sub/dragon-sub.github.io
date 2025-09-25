@@ -1,0 +1,118 @@
+html, body {
+  font-family: "Yu Gothic UI Light", "Roboto", "Noto Sans JP", sans-serif;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #f7f8fa;
+  border-bottom: 1.2px solid #e8ecef;
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.header-title {
+  font-size: 32px;
+}
+
+.header-text {
+  font-size: 16px;
+}
+
+main {
+  flex: 1;
+  padding: 1rem 3rem;
+  font-size: 16px;
+}
+
+.main-title {
+  font-size: 24px;
+}
+
+.main-works {
+  text-align: center;
+  margin: 1rem 0px;
+}
+
+.main-work {
+  text-align: left;
+  width: calc(100vw - 8rem);
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #f7f8fa;
+  display: flex;
+  flex-direction: row;
+  border: 1.2px solid #e8ecef;
+  margin: 1rem 0px;
+}
+
+.main-work-title {
+  font-size: 24px;
+}
+
+.main-work-explain {
+  flex-direction: column;
+}
+
+.main-work, img {
+  height: 100px;
+  padding-right: 1rem;
+}
+
+footer {
+  background-color: #f7f8fa;
+  border-top: 1.2px solid #e8ecef;
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 16px;
+}
+
+a {
+  color: #000;
+}
+
+::-webkit-scrollbar {
+  background-color: #eee;
+  width: 6px;
+  border-left: 1px solid #bbb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.blog-img {
+  width: 50vw;
+  height: auto;
+  margin: 2rem;
+}
+
+.blog-posts {
+  font-size: 20px;
+}
+
+.blog-text {
+  font-size: 16px;
+}
+
+.blog-button {
+  font-family: "Yu Gothic UI Light", "Roboto", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  padding: 0.25rem;
+  background-color: #fbfcfd;
+  border: 1px solid #eef2f4;
+  border-radius: 2px;
+  transition: background-color ease 0.3s;
+}
+
+.blog-button:hover {
+  background-color: #f3f6f8;
+}
