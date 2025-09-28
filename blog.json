@@ -5,5 +5,13 @@
     "date": "2025-09-25",
     "content": "Blogを新たに開設しました。いちいちhtmlを作るのはめんどくさいのでデータはjsonに入れて、jsで更新しています。",
     "img": "https://i.postimg.cc/mg9PMDNd/1.png"
+  },
+  {
+    "id": 2,
+    "title": "HPデザイン変更",
+    "date": "2025-09-28",
+    "content": "HPのデザインを変えてみました。",
+    "img": "https://i.postimg.cc/j5WMftdk/2.png"
   }
 ]
+
