@@ -15,17 +15,13 @@ header {
   padding: 20px 0px;
   text-align: left;
   display: flex;
-  flex-direction: row;
-  min-width: 100vw;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-title {
   padding: 0px 30px;
   font-size: 32px;
-}
-
-.header-gap {
-  flex: 1;
 }
 
 .header-text {
@@ -35,7 +31,6 @@ header {
 .header-items {
   text-align: right;
   height: 100%;
-  align-items: center;
 }
 
 main {
@@ -58,7 +53,7 @@ main {
   width: calc(100vw - 8rem);
   padding: 1rem;
   border-radius: 5px;
-  background-color: #f7f8fa;
+  background-color: #fff;
   display: flex;
   flex-direction: row;
   border: 1.2px solid #e8ecef;
@@ -138,4 +133,5 @@ a:hover {
   background-color: #f3f6f8;
 
 }
+
 
