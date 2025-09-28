@@ -19,6 +19,7 @@ header {
   align-items: center;
   position: fixed;
   backdrop-filter: blur(10px);
+  width: 100%;
 }
 
 .header-title {
@@ -141,6 +142,7 @@ a:hover {
   background-color: #f3f6f8;
 
 }
+
 
 
 
