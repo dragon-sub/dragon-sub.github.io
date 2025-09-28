@@ -6,7 +6,7 @@ html, body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #f7f8fa;
+  background-color: #f9fafb;
 }
 
 header {
@@ -16,9 +16,11 @@ header {
   text-align: left;
   display: flex;
   flex-direction: row;
+  min-width: 100vw;
 }
 
 .header-title {
+  padding: 0px 30px;
   font-size: 32px;
 }
 
@@ -136,3 +138,4 @@ a:hover {
   background-color: #f3f6f8;
 
 }
+
