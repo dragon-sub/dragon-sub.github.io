@@ -31,6 +31,8 @@ header {
 .header-items {
   text-align: right;
   height: 100%;
+  padding: 0px 30px;
+  gap: 1.5rem;
 }
 
 main {
@@ -133,5 +135,6 @@ a:hover {
   background-color: #f3f6f8;
 
 }
+
 
 
