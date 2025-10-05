@@ -23,10 +23,19 @@
   {
     "id": 4,
     "title": "【Aer OS開発】Part.2 PLTE再開発",
+    "date": "2025-10-05",
     "content": "Aer OSの開発に伴いPLTEを作り直します。参考にするフォントはSegoe UI LightとKlee Oneです。",
     "img": "https://i.postimg.cc/bYtdncdQ/4.png"
+  },
+  {
+    "id": 5,
+    "title": "【Aer OS開発】Part.3 PLTE途中まで",
+    "date": "2025-10-06",
+    "content": "587/7124文字まで出来ました。かなりしんどい。",
+    "img": "https://i.postimg.cc/0jPCw4bQ/5.png"
   }
 ]
+
 
 
 
