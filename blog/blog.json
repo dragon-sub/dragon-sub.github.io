@@ -19,7 +19,14 @@
     "date": "2025-10-04",
     "content": "OSの最下層の描画命令部分を作りました。ホバーとかは仮想変数で対応しています。",
     "img": "https://i.postimg.cc/44FHsbFK/3.png"
+  },
+  {
+    "id": 4,
+    "title": "【Aer OS開発】Part.2 PLTE再開発",
+    "content": "Aer OSの開発に伴いPLTEを作り直します。参考にするフォントはSegoe UI LightとKlee Oneです。",
+    "img": "https://i.postimg.cc/bYtdncdQ/4.png"
   }
 ]
+
 
 
