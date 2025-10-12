@@ -8,7 +8,7 @@ function render(posts) {
     const end = start + 5;
     const list = posts.slice(start, end);
 
-    container.innerHTML = '<div class="main-title">記事一覧 (Page ' + pageNum + ")</div>";
+    container.innerHTML = '<div class="main-title">記事一覧 (Page ' + pageNum + `)</div><div class="main-text"><a href="#s${pageNum - 1}">[前のページ]</a> | <a href="#s${pageNum + 1}">[次のページ]</a></div>`;
     list.forEach(post => {
       container.innerHTML += `
         <br>
@@ -46,3 +46,4 @@ fetch("blog.json")
     render(posts);
     window.addEventListener("hashchange", () => render(posts));
   });
+
