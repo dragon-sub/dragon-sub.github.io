@@ -70,6 +70,7 @@ main {
   width: 250px;
   margin-left: 3rem;
   border-left: 1.2px solid #e8ecef;
+  padding: 20px;
 }
 
 .main-title {
@@ -170,6 +171,7 @@ section {
   padding-left: 10px;
   border-left: 2px solid #d6d6eb;
 }
+
 
 
 
