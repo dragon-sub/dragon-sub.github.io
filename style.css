@@ -57,12 +57,15 @@ main {
   display: flex;
   flex-direction: column;
   padding: calc(90px + 1rem) 0px 1rem 3rem;
+  flex: 1;
 }
 
 .side-bar {
-  background-color: #e9f2f5;
+  background-color: #dde3ea;
+  color: #1E293B;
   width: 250px;
   margin-left: 3rem;
+  border-left: 1.2px solid #e8ecef;
 }
 
 .main-title {
@@ -163,6 +166,7 @@ section {
   padding-left: 10px;
   border-left: 2px solid #d6d6eb;
 }
+
 
 
 
