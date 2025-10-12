@@ -60,6 +60,10 @@ main {
   flex: 1;
 }
 
+.main-padding {
+  padding: calc(90px + 1rem) 0px 1rem 3rem;
+}
+
 .side-bar {
   background-color: #dde3ea;
   color: #1E293B;
@@ -166,6 +170,7 @@ section {
   padding-left: 10px;
   border-left: 2px solid #d6d6eb;
 }
+
 
 
 
