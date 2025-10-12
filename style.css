@@ -44,8 +44,21 @@ header {
 
 main {
   flex: 1;
-  padding: calc(90px + 1rem) 3rem 1rem 3rem;
+  padding: calc(90px + 1rem) 0px 1rem 3rem;
   font-size: 16px;
+  display: flex;
+  flex-direction: row;
+}
+
+.main-content {
+  margin: 0;
+  height: 100%;
+}
+
+.side-bar {
+  background-color: #e9f2f5;
+  width: 250px;
+  height: 100%;
 }
 
 .main-title {
@@ -146,5 +159,6 @@ section {
   padding-left: 10px;
   border-left: 2px solid #d6d6eb;
 }
+
 
 
