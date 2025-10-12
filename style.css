@@ -18,7 +18,6 @@ header {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  backdrop-filter: blur(8px);
   width: 100%;
 }
 
@@ -66,7 +65,7 @@ main {
 }
 
 .side-bar {
-  background-color: #dde3ea;
+  background-color: #fff;
   color: #1E293B;
   width: 250px;
   margin-left: 3rem;
@@ -171,6 +170,7 @@ section {
   padding-left: 10px;
   border-left: 2px solid #d6d6eb;
 }
+
 
 
 
