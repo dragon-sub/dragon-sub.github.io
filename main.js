@@ -48,8 +48,10 @@ function recite(){
 
 function changeMenu(){
   let menu = document.getElementById("menu");
-  if (window.innerWidth <= 768){
+  let popup = document.getElementById("popup");
+  if (window.innerWidth > 768){
     menu.innerHTML = '<a href="dragon-sub.github.io">Home</a><a href="https://dragon-sub.github.io/blog/">Blog</a>';
+    popup.classList.remove('show');
   }{
     menu.innerHTML = '<a href="dragon-sub.github.io">Home</a><a href="https://dragon-sub.github.io/blog/">Blog</a><a onclick="togglePopup();">☰</a>';
   };
@@ -64,6 +66,7 @@ function togglePopup(){
 window.addEventListener('resize', changeMenu)
 changeMenu();
 document.getElementById("word").innerText = "「"+ recite()+ "」";
+
 
 
 
