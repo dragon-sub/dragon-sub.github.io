@@ -47,7 +47,7 @@ function recite(){
 };
 
 function updateLayout(){
-  let bar = document.getElementById("side-bar")
+  let bar = document.getElementById("side-bar");
   if (window.innerWidth <= 768){
     bar.style.display = "none";
   }{
@@ -58,3 +58,4 @@ function updateLayout(){
 document.getElementById("word").innerText = "「"+ recite()+ "」";
 updateLayout();
 window.addEventListener("resize", updateLayout);
+
