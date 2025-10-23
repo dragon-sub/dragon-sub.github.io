@@ -46,4 +46,15 @@ function recite(){
   return(words[random(0,words.length)]);
 };
 
+function updateLayout(){
+  let bar = document.getElementById("side-bar")
+  if (window.innerWidth <= 768){
+    bar.style.display = "none";
+  }{
+    bar.style.display = "block";
+  };
+};
+
 document.getElementById("word").innerText = "「"+ recite()+ "」";
+updateLayout();
+window.addEventListener("resize", updateLayout);
