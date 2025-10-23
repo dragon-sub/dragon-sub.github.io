@@ -46,6 +46,23 @@ function recite(){
   return(words[random(0,words.length)]);
 };
 
+function changeMenu(){
+  let menu = document.getElementById("menu");
+  if (window.innerWidth <= 768){
+    menu.innerHTML = '<a href="dragon-sub.github.io">Home</a><a href="https://dragon-sub.github.io/blog/">Blog</a>';
+  }{
+    menu.innerHTML = '<a href="dragon-sub.github.io">Home</a><a href="https://dragon-sub.github.io/blog/">Blog</a><a onclick="togglePopup();">☰</a>';
+  };
+};
+
+function togglePopup(){
+  let document.getElementById("popup");
+  popup.classList.toggle('show');
+};
+
+window.addEventListener('resize', changeMenu)
+changeMenu();
 document.getElementById("word").innerText = "「"+ recite()+ "」";
+
 
 
