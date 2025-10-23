@@ -172,6 +172,11 @@ section {
   border-left: 2px solid #d6d6eb;
 }
 
+@media (max-width: 768px) {
+  .side-bar{
+    display: none;
+  }
+}
 
 
 
