@@ -68,7 +68,6 @@ main {
   background-color: #fff;
   color: #1E293B;
   width: 250px;
-  margin-left: 3rem;
   border-left: 1.2px solid #e8ecef;
   padding: 20px;
 }
@@ -177,6 +176,7 @@ section {
     display: none;
   }
 }
+
 
 
 
