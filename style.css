@@ -60,7 +60,7 @@ main {
 }
 
 .main-padding {
-  padding: calc(90px + 1rem) 0px 1rem 3rem;
+  padding: calc(90px + 1rem) 3rem 1rem 3rem;
   flex-direction: column;
 }
 
@@ -139,7 +139,7 @@ a:hover {
 }
 
 .blog-img {
-  width: 50vw;
+  width: calc(100vw - 160px);
   height: auto;
   margin: 2rem;
 }
@@ -177,6 +177,7 @@ section {
     display: none;
   }
 }
+
 
 
 
