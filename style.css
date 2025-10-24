@@ -195,6 +195,7 @@ section {
 .dogImg {
   width: calc(100vw - 106px - 250px);
   height: auto;
+  padding-top: 20px;
 }
 
 @media (max-width: 768px) {
@@ -204,9 +205,9 @@ section {
 
   .dogImg {
     width: calc(100vw - 106px);
-    height: auto;
   }
 }
+
 
 
 
