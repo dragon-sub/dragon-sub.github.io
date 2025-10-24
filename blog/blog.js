@@ -13,9 +13,14 @@ function render(posts) {
       container.innerHTML += `
         <br>
         <div class="post-summary">
-          <div class="blog-posts"><a href="#k${post.id}">${post.title}</a></div>
-          <p>${post.date}</p>
-        </div>
+          <a href="#k${post.id}" class="blog-card">
+            <div style="display: justify-content: space-between; align-items: center;">
+              <div style="display: flex; flex-direction: column;">
+                <div style="font-size: 20px; margin: 10px 0px 5px 10px;">${post.title}</div>
+                <div style="font-size: 16px: margin: 5px 0px 10px 10px;">${post.date}</div>
+              </div>
+              <div style="background-color: #f3f4f6; border: 2px solid #e5e7eb; border-radius: 10px; font-size: 16px;">約${math.round(post.content.length / 500)}分</div>
+            </div>
       `;
     });
 
@@ -46,4 +51,5 @@ fetch("blog.json")
     render(posts);
     window.addEventListener("hashchange", () => render(posts));
   });
+
 
