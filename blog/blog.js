@@ -14,12 +14,14 @@ function render(posts) {
         <br>
         <div class="post-summary">
           <a href="#k${post.id}">
-            <div style="display:flex; justify-content:space-between; align-items:center; flex-direction:row; border-radius:15px; display:block;" id="blog-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-direction: row; border-radius: 15px;" id="blog-card">
               <div style="display: flex; flex-direction: column; flex-grow:0;">
                 <div style="font-size: 20px; padding: 10px 10px 5px 10px;">${post.title}</div>
                 <div style="font-size: 16px; padding: 5px 10px 10px 10px;">${post.date}</div>
               </div>
-              <div style="background-color: #f3f4f6; border: 2px solid #e5e7eb; border-radius: 10px; font-size: 16px; flex-grow: 0;">約${Math.round(post.content.length / 500)}分</div>
+              <div style="background-color: #f3f4f6; border: 2px solid #e5e7eb; border-radius: 10px; font-size: 16px; flex-grow: 0; padding: 5px; margin: 10px;">
+                約${Math.round(post.content.length / 500)}分
+              </div>
             </div>
           </a>
         </div>
@@ -53,6 +55,7 @@ fetch("blog.json")
     render(posts);
     window.addEventListener("hashchange", () => render(posts));
   });
+
 
 
 
