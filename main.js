@@ -42,7 +42,7 @@ fetch('https://dog.ceo/api/breeds/image/random')
       .then(responce => responce.json())
       .then(data => {
         let dog = data.message;
-        dogImg.innerHTML = `<img href=${dog} class="dogImg">`;
+        dogImg.innerHTML = `<img src=${dog} class="dogImg">`;
       })
       .catch(error => {
         dogImg.innerHTML = 'ワンちゃんは脱走しました。'
@@ -80,6 +80,7 @@ function togglePopup(){
 window.addEventListener('resize', changeMenu)
 changeMenu();
 document.getElementById("word").innerText = "「"+ recite()+ "」";
+
 
 
 
