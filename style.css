@@ -172,7 +172,7 @@ section {
 }
 
 .popup {
-  position: absolute;
+  position: fixed;
   transform: translate(-50%, -50%) scale(0.8);
   width: calc(100vw - 96px);
   height: calc(100vh - 96px);
@@ -197,6 +197,7 @@ section {
     display: none;
   }
 }
+
 
 
 
