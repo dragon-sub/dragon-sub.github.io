@@ -193,7 +193,7 @@ section {
 }
 
 .dogImg {
-  width: calc(100vw - 106px - 250px);
+  width: 100%;
   height: auto;
   padding-top: 20px;
 }
@@ -202,11 +202,8 @@ section {
   .side-bar{
     display: none;
   }
-
-  .dogImg {
-    width: calc(100vw - 106px);
-  }
 }
+
 
 
 
