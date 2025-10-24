@@ -192,11 +192,22 @@ section {
   opacity: 1;
 }
 
+.dogImg {
+  width: calc(100vw - 106px - 250px);
+  height: auto;
+}
+
 @media (max-width: 768px) {
   .side-bar{
     display: none;
   }
+
+  .dogImg {
+    width: calc(100vw - 106px);
+    height: auto;
+  }
 }
+
 
 
 
