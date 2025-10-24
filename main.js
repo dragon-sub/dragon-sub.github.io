@@ -60,7 +60,7 @@ function changeMenu(){
 function togglePopup(){
   let popup = document.getElementById("popup");
   content = document.getElementById('side-bar').innerHTML;
-  content += '<a onclick="togglePopup();" style="position: absolute; top: 0%; right: 0%; font-size: 20px;">✕</a>';
+  content += '<a onclick="togglePopup();" style="position: absolute; top: 0%; right: 0%; font-size: 20px; margin: 3px;">✕</a>';
   popup.innerHTML = content;
   popup.classList.toggle('show');
 };
@@ -68,6 +68,7 @@ function togglePopup(){
 window.addEventListener('resize', changeMenu)
 changeMenu();
 document.getElementById("word").innerText = "「"+ recite()+ "」";
+
 
 
 
