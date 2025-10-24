@@ -186,11 +186,13 @@ section {
   background-color: #fff;
   border: 2px solid #f3f3f3;
   border-radius: 10px;
+  display: none;
 }
 
 .show {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
+  display: block;
 }
 
 .dogImg {
@@ -204,6 +206,7 @@ section {
     display: none;
   }
 }
+
 
 
 
