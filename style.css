@@ -152,6 +152,16 @@ a:hover {
   font-size: 16px;
 }
 
+.blog-card div {
+  background-color: #fff;
+  border: 2px solid #e6e9ef;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.blog card div:hover {
+  background-color: #eaeaea;
+}
+
 .blog-button {
   font-family: "Yu Gothic UI Light", "Roboto", "Noto Sans JP", sans-serif;
   font-size: 16px;
@@ -207,6 +217,7 @@ section {
     display: none;
   }
 }
+
 
 
 
