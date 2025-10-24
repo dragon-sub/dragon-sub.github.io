@@ -38,7 +38,7 @@ let words = [
 
 let dogImg = document.getElementById('dog-img');
 
-fetch(https://dog.ceo/api/breeds/image/random)
+fetch('https://dog.ceo/api/breeds/image/random')
       .then(responce => responce.json())
       .then(data => {
         let dog = data.message;
@@ -80,6 +80,7 @@ function togglePopup(){
 window.addEventListener('resize', changeMenu)
 changeMenu();
 document.getElementById("word").innerText = "「"+ recite()+ "」";
+
 
 
 
