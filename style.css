@@ -159,7 +159,7 @@ a:hover {
   border-radius: 15px;
 }
 
-#blog card:hover {
+#blog-card:hover {
   background-color: #eaeaea;
 }
 
@@ -218,6 +218,7 @@ section {
     display: none;
   }
 }
+
 
 
 
