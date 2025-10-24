@@ -14,7 +14,7 @@ function render(posts) {
         <br>
         <div class="post-summary">
           <a href="#k${post.id}">
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-direction: row; style="border-radius: 15px; id="blog-card"">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-direction: row; border-radius: 15px; display: block;" id="blog-card">
               <div style="display: flex; flex-direction: column; display: inline-block;">
                 <div style="font-size: 20px; padding: 10px 0px 5px 10px;">${post.title}</div>
                 <div style="font-size: 16px: padding: 5px 0px 10px 10px;">${post.date}</div>
@@ -53,6 +53,7 @@ fetch("blog.json")
     render(posts);
     window.addEventListener("hashchange", () => render(posts));
   });
+
 
 
 
