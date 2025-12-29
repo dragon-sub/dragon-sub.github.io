@@ -1,0 +1,176 @@
+html body {
+  font-family: "Outfit", "Noto Sans JP", sans-serif;
+  font-weight: 200;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f6f9;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  height: 480px;
+  background-image: url(banner.png);
+  background-size: 100% auto;
+  background-position: center top;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 100;
+  color: #fff;
+}
+
+.headerBanner {
+  font-size: 72px;
+  padding: 40px 40px 20px 40px;
+  transform: none;
+  transition: transform 0.4s ease;
+}
+
+.headerBanner:hover {
+  transform: translateX(13px);
+}
+
+.accesses {
+  font-size: 20px;
+  padding-left: 40px;
+  font-weight: 200;
+}
+
+.headerWrap {
+  background-color: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: 100%;
+  transition: background-color 1.5s ease;
+}
+
+.nav a {
+  color: #000;
+  position: relative;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #007fff;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  background: #d6d6eb;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  height: 2px;
+}
+
+.nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  font-size: 20px;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+}
+
+.navFixed {
+  position: fixed;
+}
+
+.nav .banner {
+  font-size: 36px;
+  padding: 0 20px;
+  font-weight: 100;
+  opacity: 0;
+  transform: translateY(-16px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+  transition-delay: 0.4s;
+}
+
+.nav li {
+  list-style: none;
+  transform: translateY(-16px);
+  opacity: 0;
+  transition:
+    transform 0.8s ease,
+    opacity 0.8s ease;
+  margin-right: 20px;
+}
+
+.nav ul {
+  display: flex;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  background-color: #fff;
+}
+
+footer .text {
+  padding: 16px;
+  font-size: 16px;
+}
+
+section {
+  margin: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.i {
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.i.ss {
+  opacity: 1;
+  transform: none;
+}
+
+.st {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.st2 {
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+.sbb {
+  background-color: #f9fcff;
+  color: #444;
+}
+
+p {
+  margin: 0.25em 0;
+}
