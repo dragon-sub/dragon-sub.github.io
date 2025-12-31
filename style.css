@@ -16,7 +16,7 @@ html {
 
 header {
   height: 480px;
-  background-image: url(banner.png);
+  background-image: url(img/banner.png);
   background-size: 100% auto;
   background-position: center top;
   font-family: 'Outfit', sans-serif;
@@ -120,6 +120,7 @@ a:hover {
 
 .nav ul {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
 }
 
@@ -129,6 +130,7 @@ main {
 
 footer {
   background-color: #fff;
+  padding: 10px;
 }
 
 footer .text {
@@ -173,4 +175,18 @@ section {
 
 p {
   margin: 0.25em 0;
+}
+
+::selection {
+  background-color: #dbedff;
+  color: currentColor;
+}
+
+small {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.list {
+  list-style: none;
 }

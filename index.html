@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="description" content="ゆーのホームページ。">
+    <meta name="author" content="ゆー">
+    <meta property="og:title" content="Jüw's Page">
+    <meta property="og:description" content="ゆーのホームページ。">
+    <meta property="og:site_name" content="Jüw's Page">
+    <meta property="og:url" content="https://drsb.f5.si">
+    <meta property="og:image" content="img/favicon.ico">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:type" content="website">
+    <meta property="twitter:card" content="summary">
     <title>Jüw's Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <link href="img/favicon.ico" rel="icon">
+    <link rel="apple-touch-icon" href="img/favicon.ico" sizes="180x180">
     <script src="https://counter.nanasi-rasi.net/counter.js" defer></script>
     <script src="script.js" defer></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body id="top">
-    <p id="count" style="display: none;"></p>
     <header>
       <div class="headerWrap" id="headerWrap" style="background-color: rgba(255, 255, 255, 1)">
         <div class="headerBanner">Jüw's Page</div>
-        <div class="accesses" id="accesses">0 Accesses</div>
+        <div class="accesses" id="accesses"><span id="count" style="display: none;"></span> Accesses</div>
       </div>
     </header>
     <nav class="nav" id="nav">
@@ -40,7 +52,8 @@
       </section>
       <section class="sbb" id="workingOn">
         <div class="st i">Working on</div>
-        <div class="i">Coming soon...</div>
+          <p class="i">人工言語「@ski」の開発</p>
+          <p class="i">日, 中, 英, 仏, 西の勉強</p>
       </section>
       <section class="sbb" id="works">
         <div class="st i">Works</div>
@@ -48,18 +61,32 @@
       </section>
       <section class="sbb" id="links">
         <div class="st i">Links</div>
+        <div class="st2 i">My link</div>
+        <p class="i">X(旧Twitter): <a href="https://x.com/dragon_scratch_">ゆー(@dragon_scratch_)</a></p>
+        <p class="i">GitHub: <a href="https://github.com/dragon-sub">Jüw(dragon-sub)</a></p>
+        <p class="i">Scratch: <a href="https://scratch.mid.edu/users/dragon_sub">dragon_sub</a></p>
+        <div class="st2 i">Reciprocal link</div>
         <p class="i">やなぎさん: <a href="https://yana-lp.f5.si/">やなぎのホームページ</a></p>
+        <small class="i">コントラストがあって見やすい</small>
         <p class="i">風止渚さん: <a href="https://kzng.f5.si/">風止渚のホームページ</a></p>
+        <small class="i">私の尊敬してる方。</small>
         <p class="i">zepto_0321氏: <a href="https://zepto-0321.github.io/zepto_page/">zepto_page</a></p>
+        <small class="i">私のリア友。いろんなこと知ってる</small>
         <p class="i">うまいだんごさん: <a href="https://umaii.f5.si/">うまいだんご</a></p>
+        <small class="i">アプリとか作ってるすごい人。ページの一番最初から伝わるC#信者感</small>
         <p class="i">n0xaさん: <a href="https://n0xa.f5.si/">自己紹介</a></p>
+        <small class="i">この人もC#とか書くすごい人。グラデーションがきれい。</small>
+        <p class="i">ActiveTKさん: <a href="https://profile.activetk.jp/">ActiveTK. - ActiveTK.jp</a></p>
+        <small class="i">とにかくすごい方。私の憧れ。</small>
+        <p class="i">256serverさん: <a href="https://256server.com/">256server | Home</a></p>
+        <small class="i">アクセス数と相互リンクの数が多くて羨ましい</small>
       </section>
     </main>
     <footer>
-      <div class="text i">
-        Images: Photo by zyutazyudasu (CC BY-SA 2.0)
-        <br>
-        Fonts: Outfit, Noto Sans JP
+      <div class="text">
+        <p class="i">Images: Photo by zyutazyudasu (CC BY-SA 2.0)</p>
+        <p class="i">Fonts: Outfit, Noto Sans JP</p>
+        <p class="i">Last updated: 2025/12/31</p>
       </div>
     </footer>
   </body>

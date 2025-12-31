@@ -9,7 +9,6 @@ window.addEventListener('load', () => {
     li.style.opacity = 1;
     li.style.transform = 'none';
   });
-  document.getElementById('accesses').innerText = document.getElementById('count').innerText + ' Accesses';
 });
 
 const elements = document.querySelectorAll('.i');
@@ -23,7 +22,7 @@ const fade = new IntersectionObserver(
     });
   },
   {
-    threshold: 0
+    threshold: 0.1
   }
 );
 
