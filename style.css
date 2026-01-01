@@ -24,6 +24,12 @@ header {
   color: #fff;
 }
 
+@media (max-width: 855px) {
+  header {
+    background-size: auto 100%;
+  }
+}
+
 .headerBanner {
   font-size: 72px;
   padding: 40px 40px 20px 40px;
@@ -90,6 +96,7 @@ a:hover {
   display: flex;
   padding: 10px;
   align-items: center;
+  z-index: 10000;
 }
 
 .navFixed {
@@ -141,7 +148,7 @@ footer .text {
 section {
   margin: 15px;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   text-align: center;
 }
 
@@ -189,4 +196,26 @@ small {
 
 .list {
   list-style: none;
+}
+
+.work {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+.formula {
+  font-family: "Outfit", "Noto Sans JP", sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  height: 24px;
+  padding: 8px 16px;
+  border-radius: 24px;
+  width: calc(100% - 32px);
+  border: none;
+}
+
+.formula:focus {
+  outline: 2px solid #ccc;
 }
