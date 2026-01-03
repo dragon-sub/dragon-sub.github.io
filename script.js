@@ -27,3 +27,5 @@ const fade = new IntersectionObserver(
 );
 
 elements.forEach(section => fade.observe(section));
+const realButton = document.getElementById('uploadCsv');
+const fakeButton = document.getElementById('fakeButton');
