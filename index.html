@@ -9,7 +9,7 @@
     <meta property="og:description" content="ゆーのホームページ。">
     <meta property="og:site_name" content="Jüw's Page">
     <meta property="og:url" content="https://drsb.f5.si">
-    <meta property="og:image" content="favicon.ico">
+    <meta property="og:image" content="img/ogImage.png">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:type" content="website">
     <meta property="twitter:card" content="summary">
@@ -23,6 +23,7 @@
     <script src="https://counter.nanasi-rasi.net/counter.js" defer></script>
     <script src="script.js" defer></script>
     <script src="js/formulaEvaluation.js" defer></script>
+    <script src="js/flashcards.js" defer></script>
   </head>
   <body id="top">
     <header>
@@ -38,6 +39,7 @@
         <li><a href="#workingOn">Working on</a></li>
         <li><a href="#works">Works</a></li>
         <li><a href="#links">Links</a></li>
+        <li><a href="#history">History</a></li>
       </ul>
     </nav>
     <main>
@@ -59,9 +61,24 @@
       <section class="sbb" id="works">
         <div class="st i">Works</div>
         <div class="i work">
-          <div class="st2 i">Formula evaluation</div>
-          <input class="formula i" placeholder="Example: 2+(3*29)" id="formula">
-          <p class="i">=<span id="answer"></span></p>
+          <div class="st2">Formula evaluation</div>
+          <input class="formula" placeholder="Example: 2+(3*29)" id="formula">
+          <p>=<span id="answer"></span></p>
+        </div>
+        <div class="i work">
+          <div class="st2">Flashcards</div>
+          <input type="file" accept=".csv" style="display: none;" id="uploadCsv">
+          <div class="button" id="fakeButton">Upload .csv</div>
+          <a href="files/sample.csv" download><div class="button">Download sample.csv</div></a>
+          <div class="flashcardsWrap">
+            <div class="selectWrap">
+              <div class="selectInner selected" id="memorize"><span>Memorize</span></div>
+              <div class="selectInner" id="test"><span>Test</span></div>
+            </div>
+            <div class="flashcardsScreen" id="screen">
+              <div>CSVがアップロードされていません。</div>
+            </div>
+          </div>
         </div>
       </section>
       <section class="sbb" id="links">
@@ -70,6 +87,7 @@
         <p class="i">X(旧Twitter): <a href="https://x.com/dragon_scratch_">ゆー(@dragon_scratch_)</a></p>
         <p class="i">GitHub: <a href="https://github.com/dragon-sub">Jüw(dragon-sub)</a></p>
         <p class="i">Scratch: <a href="https://scratch.mid.edu/users/dragon_sub">dragon_sub</a></p>
+        <p class="i">Meax: <a href="https://meax.jp/profile/269">ゆー(@269)</a></p>
         <div class="st2 i">Reciprocal link</div>
         <p class="i">やなぎさん: <a href="https://yana-lp.f5.si/">やなぎのホームページ</a></p>
         <small class="i">コントラストがあって見やすい</small>
@@ -86,12 +104,20 @@
         <p class="i">256serverさん: <a href="https://256server.com/">256server | Home</a></p>
         <small class="i">アクセス数と相互リンクの数が多くて羨ましい</small>
       </section>
+      <section class="sbb" id="history">
+        <div class="st i">History</div>
+        <div class="st2 i">2025.12</div>
+        <p class="i">12.29 HPをリニューアル</p>
+        <div class="st2 i">2026.01</div>
+        <p class="i">01.01 Formula evaluationを公開</p>
+        <p class="i">01.03 Flashcardsを公開</p>
+      </section>
     </main>
     <footer>
       <div class="text">
         <p class="i">Images: Photo by zyutazyudasu (CC BY-SA 2.0)</p>
         <p class="i">Fonts: Outfit, Noto Sans JP</p>
-        <p class="i">Last updated: 2026/01/01</p>
+        <p class="i">Last updated: 2026/01/03</p>
       </div>
     </footer>
   </body>
