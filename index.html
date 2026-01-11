@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" id="page">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
@@ -26,10 +26,17 @@
     <script src="js/flashcards.js" defer></script>
   </head>
   <body id="top">
+    <div class="progressWrap"><div class="progressInner" id="progressInner"></div></div>
     <header>
       <div class="headerWrap" id="headerWrap" style="background-color: rgba(255, 255, 255, 1)">
         <div class="headerBanner">Jüw's Page</div>
         <div class="accesses" id="accesses"><span id="count"></span> Accesses</div>
+        <svg class="clock" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" id="clock">
+          <circle cx="50" cy="50" r="49" fill="rgba(255, 255, 255, 0.3)" stroke="#fff" stroke-width="1" />
+          <rect x="49.5" y="15" width="1" height="35" fill="#fff" id="minute" transform="rotate(0 50 50)" />
+          <rect x="49.25" y="10" width="0.5" height="40" fill="#fff" id="second" transform="rotate(0 50 50)" />
+          <rect x="49.25" y="25" width="1.5" height="25" fill="#fff" id="hour" transform="rotate(0 50 50)" />
+        </svg>
       </div>
     </header>
     <nav class="nav" id="nav">
@@ -60,9 +67,10 @@
       </section>
       <section class="sbb" id="works">
         <div class="st i">Works</div>
+        <p class="i">JSの練習のために外部ライブラリを使わずに作った作品集です。</p>
         <div class="i work">
           <div class="st2">Formula evaluation</div>
-          <input class="formula" placeholder="Example: 2+(3*29)" id="formula">
+          <input class="formula" placeholder="Example: (sin(pi()/6)^2+cos(pi()/3))-gcd(6,4)%3" id="formula">
           <p>=<span id="answer"></span></p>
         </div>
         <div class="i work">
@@ -84,40 +92,45 @@
       <section class="sbb" id="links">
         <div class="st i">Links</div>
         <div class="st2 i">My link</div>
-        <p class="i">X(旧Twitter): <a href="https://x.com/dragon_scratch_">ゆー(@dragon_scratch_)</a></p>
-        <p class="i">GitHub: <a href="https://github.com/dragon-sub">Jüw(dragon-sub)</a></p>
-        <p class="i">Scratch: <a href="https://scratch.mid.edu/users/dragon_sub">dragon_sub</a></p>
-        <p class="i">Meax: <a href="https://meax.jp/profile/269">ゆー(@269)</a></p>
+        <p class="i"><c-l>X(旧Twitter)</c-l><c-r><a href="https://x.com/dragon_scratch_">ゆー(@dragon_scratch_)<img src="img/externalLink.svg" class="icon"></a></c-r></p>
+        <p class="i"><c-l>GitHub</c-l><c-r><a href="https://github.com/dragon-sub">Jüw(dragon-sub)<img src="img/externalLink.svg" class="icon"></a></c-r></p>
+        <p class="i"><c-l>Scratch</c-l><c-r><a href="https://scratch.mid.edu/users/dragon_sub">dragon_sub<img src="img/externalLink.svg" class="icon"></a></c-r></p>
+        <p class="i"><c-l>Meax</c-l><c-r><a href="https://meax.jp/profile/269">ゆー(@269)<img src="img/externalLink.svg" class="icon"></a></c-r></p>
         <div class="st2 i">Reciprocal link</div>
-        <p class="i">やなぎさん: <a href="https://yana-lp.f5.si/">やなぎのホームページ</a></p>
+        <p class="i"><c-l>やなぎさん</c-l><c-r><a href="https://yana-lp.f5.si/">やなぎのホームページ<img src="img/externalLink.svg" class="icon"></a></c-r></p>
         <small class="i">コントラストがあって見やすい</small>
-        <p class="i">風止渚さん: <a href="https://kzng.f5.si/">風止渚のホームページ</a></p>
+        <p class="i"><c-l>風止渚さん</c-l><c-r><a href="https://kzng.f5.si/">風止渚のホームページ<img src="img/externalLink.svg" class="icon"></a></c-r></p>
         <small class="i">私の尊敬してる方。</small>
-        <p class="i">zepto_0321氏: <a href="https://zepto-0321.github.io/zepto_page/">zepto_page</a></p>
+        <p class="i"><c-l>zepto_0321氏</c-l><c-r><a href="https://zepto-0321.github.io/zepto_page/">zepto_page<img src="img/externalLink.svg" class="icon"></a></c-r></p>
         <small class="i">私のリア友。いろんなこと知ってる</small>
-        <p class="i">うまいだんごさん: <a href="https://umaii.f5.si/">うまいだんご</a></p>
+        <p class="i"><c-l>うまいだんごさん</c-l><c-r><a href="https://umaii.f5.si/">うまいだんご<img src="img/externalLink.svg" class="icon"></a></c-r></p>
         <small class="i">アプリとか作ってるすごい人。ページの一番最初から伝わるC#信者感</small>
-        <p class="i">n0xaさん: <a href="https://n0xa.f5.si/">自己紹介</a></p>
+        <p class="i"><c-l>n0xaさん</c-l><c-r><a href="https://n0xa.f5.si/">自己紹介<img src="img/externalLink.svg" class="icon"></a></c-r></p>
         <small class="i">この人もC#とか書くすごい人。グラデーションがきれい。</small>
-        <p class="i">ActiveTKさん: <a href="https://profile.activetk.jp/">ActiveTK. - ActiveTK.jp</a></p>
+        <p class="i"><c-l>ActiveTKさん</c-l><c-r><a href="https://profile.activetk.jp/">ActiveTK. - ActiveTK.jp<img src="img/externalLink.svg" class="icon"></a></c-r></p>
         <small class="i">とにかくすごい方。私の憧れ。</small>
-        <p class="i">256serverさん: <a href="https://256server.com/">256server | Home</a></p>
+        <p class="i"><c-l>256serverさん</c-l><c-r><a href="https://256server.com/">256server | Home<img src="img/externalLink.svg" class="icon"></a></c-r></p>
         <small class="i">アクセス数と相互リンクの数が多くて羨ましい</small>
+        <p class="i">絶賛募集中です。<a href="https://x.com/dragon_scratch_">ここ</a>からどうぞ。</p>
       </section>
-      <section class="sbb" id="history">
+      <section class="sbb a" id="history">
         <div class="st i">History</div>
         <div class="st2 i">2025.12</div>
-        <p class="i">12.29 HPをリニューアル</p>
+        <p class="i"><c-l>2025.12.29</c-l><c-r>HPをリニューアル</c-r></p>
         <div class="st2 i">2026.01</div>
-        <p class="i">01.01 Formula evaluationを公開</p>
-        <p class="i">01.03 Flashcardsを公開</p>
+        <p class="i"><c-l>2026.01.01</c-l><c-r>Formula evaluationを公開</c-r></p>
+        <p class="i"><c-l>2026.01.03</c-l><c-r>Flashcardsを公開</c-r></p>
+        <p class="i"><c-l>2026.01.07</c-l><c-r>アイコン等追加</c-r></p>
+        <p class="i"><c-l>2026.01.08</c-l><c-r>プログレスバー・時計追加</c-r></p>
+        <p class="i"><c-l>2026.01.11</c-l><c-r>計算機を強化</c-r></p>
       </section>
     </main>
     <footer>
       <div class="text">
         <p class="i">Images: Photo by zyutazyudasu (CC BY-SA 2.0)</p>
         <p class="i">Fonts: Outfit, Noto Sans JP</p>
-        <p class="i">Last updated: 2026/01/03</p>
+        <p class="i">Icons: <a href="https://icons8.com/icon/83168/external-link">External link</a> icon by <a href="https://icons8.com/">icons8</a></p>
+        <p class="i">Last updated: 2026/01/11</p>
       </div>
     </footer>
   </body>
