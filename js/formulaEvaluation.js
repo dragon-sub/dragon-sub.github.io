@@ -1,5 +1,9 @@
 const formula = document.getElementById('formula');
 const answer = document.getElementById('answer');
+const arg0 = ['pi', 'e']
+const arg1 = ['sqrt', 'sin', 'cos', 'tan', 'abs', 'asin', 'acos', 'atan', 'sinh', 'cosh', 'tanh', 'log'];
+const arg2 = ['max', 'min', 'gcd', 'lcm'];
+const funs = arg0.concat(arg1, arg2);
 
 function evaluate(input) {
   let token = [];
@@ -23,15 +27,18 @@ function evaluate(input) {
   let type = '';
   for (let i = 0; i < token.length; i++) {
     type = tokenType[i];
-    if (type == 'number'){
+    if (type == 'number') {
       queue.push(token[i]);
+    } else if (type == 'function') {
+      stack.push(token[i]);
     } else if (type == 'openBracket') {
       stack.push('(');
-    } else if (type == 'closeBracket') {
+    } else if (type == 'closeBracket' || type == 'comma') {
       while (stack[stack.length - 1] != '(' && stack.length > 0) {
         queue.push(stack.pop());
       };
-      stack.pop();
+      if (type == 'closeBracket') stack.pop();
+      if (funs.includes(stack[stack.length - 1])) queue.push(stack.pop());
     } else if (type == 'operator') {
       const oo = pri(token[i]);
       while (stack.length > 0 && stack[stack.length - 1] != '(') {
@@ -49,43 +56,45 @@ function evaluate(input) {
     queue.push(stack.pop());
   };
   let calc = [];
+  let lastChar = '';
   for (let i = 0; i < queue.length; i++) {
     calc.push(queue[i]);
-    if (calc[calc.length - 1] == '+') {
-      calc.pop();
-      const b = Number(calc.pop());
-      const a = Number(calc.pop());
-      calc.push(a + b);
+    lastChar = calc[calc.length - 1];
+    if ('+-*/^%'.includes(lastChar) || arg2.includes(lastChar)) {
+      l = calc.pop();
+      const b = +calc.pop();
+      const a = +calc.pop();
+      if (l == '+') calc.push(a + b);
+      if (l == '-') calc.push(a - b);
+      if (l == '*') calc.push(a * b);
+      if (l == '/') calc.push(a / b);
+      if (l == '^') calc.push(a ** b);
+      if (l == '%') calc.push(a % b);
+      if (l == 'max') calc.push(Math.max(a, b));
+      if (l == 'min') calc.push(Math.min(a, b));
+      if (l == 'gcd') calc.push(gcd(a, b));
+      if (l == 'lcm') calc.push(a * b / gcd(a, b));      
     };
-    if (calc[calc.length - 1] == '-') {
-      calc.pop();
-      const b = Number(calc.pop());
-      const a = Number(calc.pop());
-      calc.push(a - b);
+    if (arg1.includes(lastChar)) {
+      l = calc.pop();
+      const a = +calc.pop();
+      if (l == 'sqrt') calc.push(Math.sqrt(a));
+      if (l == 'sin') calc.push(Math.sin(a));
+      if (l == 'cos') calc.push(Math.cos(a));
+      if (l == 'tan') calc.push(Math.tan(a));
+      if (l == 'abs') calc.push(Math.abs(a));
+      if (l == 'asin') calc.push(Math.asin(a));
+      if (l == 'acos') calc.push(Math.acos(a));
+      if (l == 'atan') calc.push(Math.atan(a));
+      if (l == 'sinh') calc.push(Math.sinh(a));
+      if (l == 'cosh') calc.push(Math.cosh(a));
+      if (l == 'tanh') calc.push(Math.tanh(a));
+      if (l == 'log') calc.push(Math.log(a));
     };
-    if (calc[calc.length - 1] == '*') {
-      calc.pop();
-      const b = Number(calc.pop());
-      const a = Number(calc.pop());
-      calc.push(a * b);
-    };
-    if (calc[calc.length - 1] == '/') {
-      calc.pop();
-      const b = Number(calc.pop());
-      const a = Number(calc.pop());
-      calc.push(a / b);
-    };
-    if (calc[calc.length - 1] == '^') {
-      calc.pop();
-      const b = Number(calc.pop());
-      const a = Number(calc.pop());
-      calc.push(a ** b);
-    };
-    if (calc[calc.length - 1] == '%') {
-      calc.pop();
-      const b = Number(calc.pop());
-      const a = Number(calc.pop());
-      calc.push(a % b);
+    if (arg0.includes(lastChar)) {
+      l = calc.pop();
+      if (l == 'e') calc.push(Math.E);
+      if (l == 'pi') calc.push(Math.PI);
     };
   };
   return calc[0];
@@ -93,10 +102,12 @@ function evaluate(input) {
 
 function getCharType(char, lastChar) {
   if ('+-*/^%'.includes(char)){
-    if(!(char == '-' && '(+-*/^%'.includes(lastChar))) {return 'operator';};
+    if(!(char == '-' && '(+-*/^%'.includes(lastChar))) return 'operator';
   };
-  if (char == '('){return 'openBracket'};
-  if (char == ')'){return 'closeBracket'};
+  if (char == '(') return 'openBracket';
+  if (char == ')') return 'closeBracket';
+  if (char == ',') return 'comma';
+  if (/[A-Za-z]/.test(char)) return 'function';
   return 'number';
 };
 
@@ -113,5 +124,20 @@ function pri(operator) {
 };
 
 formula.addEventListener('input', () => {
-  answer.innerText = evaluate(formula.value);
+  answer.innerText = evaluate(formula.value.replaceAll(' ', ''));
 });
+
+
+function gcd(a1, a2) {
+  let a = a1;
+  let b = a2;
+  let r = 1;
+  while (! r == 0) {
+    r = a % b;
+    a = b;
+    if (! r == 0) {
+      b = r;
+    };
+  };
+  return b;
+};
