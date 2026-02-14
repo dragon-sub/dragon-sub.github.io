@@ -3,13 +3,13 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <meta name="description" content="ゆーのホームページ。">
+    <meta name="description" content="ゆーのホームページ。相互リンク絶賛募集中">
     <meta name="author" content="ゆー">
     <meta property="og:title" content="Jüw's Page">
     <meta property="og:description" content="ゆーのホームページ。">
     <meta property="og:site_name" content="Jüw's Page">
     <meta property="og:url" content="https://drsb.f5.si">
-    <meta property="og:image" content="img/ogImage.png">
+    <meta property="og:image" content="https://drsb.f5.si/img/ogImage.png">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:type" content="website">
     <meta property="twitter:card" content="summary">
@@ -18,12 +18,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-    <link href="favicon.ico" rel="icon">
+    <link href="https://drsb.f5.si/favicon.ico" rel="icon">
     <link rel="apple-touch-icon" href="favicon.ico" sizes="180x180">
     <script src="https://counter.nanasi-rasi.net/counter.js" defer></script>
     <script src="script.js" defer></script>
     <script src="js/formulaEvaluation.js" defer></script>
     <script src="js/flashcards.js" defer></script>
+    <script src="js/pi.js" defer></script>
   </head>
   <body id="top">
     <div class="progressWrap"><div class="progressInner" id="progressInner"></div></div>
@@ -88,6 +89,14 @@
             </div>
           </div>
         </div>
+        <div class="i work">
+          <div class="st2">Find the Value of Pi</div>
+          <div>
+            <div class="button" id="startMonteCarlo">Start</div>
+            <div class="button" id="stopMonteCarlo">Stop</div>
+          </div>
+          <canvas width="800" height="900" class="monteCarlo" id="monteCarlo" />
+        </div>
       </section>
       <section class="sbb" id="links">
         <div class="st i">Links</div>
@@ -96,6 +105,7 @@
         <p class="i"><c-l>GitHub</c-l><c-r><a href="https://github.com/dragon-sub">Jüw(dragon-sub)<img src="img/externalLink.svg" class="icon"></a></c-r></p>
         <p class="i"><c-l>Scratch</c-l><c-r><a href="https://scratch.mid.edu/users/dragon_sub">dragon_sub<img src="img/externalLink.svg" class="icon"></a></c-r></p>
         <p class="i"><c-l>Meax</c-l><c-r><a href="https://meax.jp/profile/269">ゆー(@269)<img src="img/externalLink.svg" class="icon"></a></c-r></p>
+        <p class="i"><c-l>Atten</c-l><c-r><a href="https://atten.win/users/dragon_sub">@dragon_sub<img src="img/externalLink.svg" class="icon"></a></c-r></p>
         <div class="st2 i">Reciprocal link</div>
         <p class="i"><c-l>やなぎさん</c-l><c-r><a href="https://yana-lp.f5.si/">やなぎのホームページ<img src="img/externalLink.svg" class="icon"></a></c-r></p>
         <small class="i">コントラストがあって見やすい</small>
@@ -123,6 +133,9 @@
         <p class="i"><c-l>2026.01.07</c-l><c-r>アイコン等追加</c-r></p>
         <p class="i"><c-l>2026.01.08</c-l><c-r>プログレスバー・時計追加</c-r></p>
         <p class="i"><c-l>2026.01.11</c-l><c-r>計算機を強化</c-r></p>
+        <div class="st2 i">2026.02</div>
+        <p class="i"><c-l>2026.02.14</c-l><c-r>長い要素の折り畳み実装</c-r></p>
+        <p class="i"><c-l>2026.02.14</c-l><c-r>Find the Value of Piを公開</c-r></p>
       </section>
     </main>
     <footer>
@@ -130,7 +143,7 @@
         <p class="i">Images: Photo by zyutazyudasu (CC BY-SA 2.0)</p>
         <p class="i">Fonts: Outfit, Noto Sans JP</p>
         <p class="i">Icons: <a href="https://icons8.com/icon/83168/external-link">External link</a> icon by <a href="https://icons8.com/">icons8</a></p>
-        <p class="i">Last updated: 2026/01/11</p>
+        <p class="i">Last updated: 2026/02/14</p>
       </div>
     </footer>
   </body>

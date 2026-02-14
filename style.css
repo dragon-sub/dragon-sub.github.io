@@ -58,17 +58,23 @@ header {
   color: #000;
   position: relative;
   display: block;
-  transition: color 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.5s ease;
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
   color: currentColor;
-  transition: color 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.5s ease;
 }
 
 a:hover {
   color: #007fff;
+  transform: translateY(-2px);
 }
 
 .nav a::after {
@@ -77,11 +83,11 @@ a:hover {
   left: 0;
   bottom: -4px;
   width: 100%;
-  background: #d6d6eb;
+  background: #007fff;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
-  height: 2px;
+  height: 1.5px;
 }
 
 .nav a:hover::after {
@@ -150,6 +156,35 @@ section {
   padding: 20px;
   border-radius: 20px;
   text-align: center;
+  overflow-y: hidden;
+  position: relative;
+  transition: max-height 0.5s ease;
+}
+
+.showMore {
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  font-size: 20px;
+  height: 80px;
+  width: calc(100% - 40px);
+  padding: 20px;
+  background: linear-gradient(rgba(255, 255, 255, 0), #fff 50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.delete {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.shorten {
+  max-height: 100svh !important;
 }
 
 .i {
@@ -202,7 +237,7 @@ small {
   background-color: #f0f0f0;
   padding: 20px;
   margin: 15px;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 .formula {
@@ -363,6 +398,7 @@ c-r {
   padding: 20px 0 20px 40px;
 }
 
-#tetris {
-  border: 2px solid #555;
+.monteCarlo {
+  width: 100%;
+  max-width: 400px;
 }

@@ -24,7 +24,7 @@ function progress() {
   const t = page.scrollTop / point * 100;
   bar.style.width = t + '%';
   bar.title = t + '%';
-};
+}
 
 const elements = document.querySelectorAll('.i');
 const fade = new IntersectionObserver(
@@ -46,10 +46,25 @@ function updateClock() {
   const hour = d.getHours() % 12;
   const minute = d.getMinutes();
   const second = d.getSeconds();
-  ho.setAttribute('transform', `rotate(${(hour * 30) + (minute / 12)} 50 50)`);
-  mi.setAttribute('transform', `rotate(${minute * 6} 50 50)`);
+  ho.setAttribute('transform', `rotate(${(hour * 30) + (minute / 2) + (second / 120)} 50 50)`);
+  mi.setAttribute('transform', `rotate(${(minute * 6) + (second / 10)} 50 50)`);
   se.setAttribute('transform', `rotate(${second * 6} 50 50)`);
-};
+}
+
+function setShowMore() {
+  const limit = window.innerHeight;
+  const showMore = document.createElement('div');
+  showMore.innerHTML = 'Show More';
+  showMore.className = 'showMore';
+  parts = document.querySelectorAll('section');
+  parts.forEach(part => {
+    if (part.scrollHeight > limit) {
+      part.style.maxHeight = part.scrollHeight - 40 + 'px';
+      part.appendChild(showMore.cloneNode(true));
+      part.classList.add('shorten');
+    }
+  });
+}
 
 setInterval(updateClock, 1000);
 progress();
@@ -57,3 +72,13 @@ window.addEventListener('scroll', progress);
 elements.forEach(section => fade.observe(section));
 const realButton = document.getElementById('uploadCsv');
 const fakeButton = document.getElementById('fakeButton');
+setShowMore();
+
+document.querySelectorAll('.showMore').forEach(showMoreButton => {
+  showMoreButton.addEventListener('click', (event) => {
+    const target = event.target;
+    const targetParent = target.closest('section');
+    targetParent.classList.remove('shorten');
+    target.classList.add('delete');
+  });
+});
