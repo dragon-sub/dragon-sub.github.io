@@ -72,6 +72,10 @@ window.addEventListener('scroll', progress);
 elements.forEach(section => fade.observe(section));
 const realButton = document.getElementById('uploadCsv');
 const fakeButton = document.getElementById('fakeButton');
+const realSubmit = document.getElementById('realSubmit');
+const fakeSubmit = document.getElementById('fakeSubmit');
+const loading = document.querySelector('.loading');
+fakeSubmit.onclick = () => realSubmit.click();
 setShowMore();
 
 document.querySelectorAll('.showMore').forEach(showMoreButton => {
@@ -81,4 +85,23 @@ document.querySelectorAll('.showMore').forEach(showMoreButton => {
     targetParent.classList.remove('shorten');
     target.classList.add('delete');
   });
+});
+
+const endpoint = "https://script.google.com/macros/s/AKfycbzCpdCKFv_kz4XUXTESFb46pJSjHHD4eRmd77ZCyub4OpitIVYp6UAay0vFls53d9jB/exec";
+
+document.getElementById("form")
+  .addEventListener("submit", async (e) => {
+    loading.height = 60;
+    realSubmit.disabled = 'true';
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+    await fetch(endpoint, {
+      method: "POST",
+      body: JSON.stringify(data)
+    })
+    alert("送信しました");
+    e.target.reset();
+    realSubmit.disabled = 'true';
+    loading.height = 0;
 });
