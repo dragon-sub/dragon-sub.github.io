@@ -16,7 +16,7 @@ monte.fill();
 function putDot() {
   const x = Math.random() * 800;
   const y = Math.random() * 800;
-  if (Math.sqrt(x ** 2 + (800 - y) ** 2) <= 800) {
+  if (x ** 2 + (800 - y) ** 2 <= 640000) {
     inside++;
     monte.fillStyle = '#6bd0d2';
   } else {
