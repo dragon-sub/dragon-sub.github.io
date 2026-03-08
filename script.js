@@ -9,6 +9,9 @@ const realSubmit = document.getElementById('realSubmit');
 const fakeSubmit = document.getElementById('fakeSubmit');
 fakeSubmit.onclick = () => realSubmit.click();
 const loading = document.querySelector('.loading');
+const realTheme = document.getElementById('theme');
+const fakeTheme = document.querySelector('.theme');
+fakeTheme.onclick = () => realTheme.click();
 
 function prepareContents() {
   const banner = document.querySelector('.banner');

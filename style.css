@@ -6,12 +6,73 @@ html body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #f2f6f9;
+  background-color: var(--background-color);
   overflow-x: hidden;
   background-image:
-    linear-gradient(#e3e3e3 1px, transparent 1px),
-    linear-gradient(90deg, #e3e3e3 1px, transparent 1px);
+    linear-gradient(var(--background-grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--background-grid-color) 1px, transparent 1px);
   background-size: 40px 40px;
+  transition:
+    background-color 0.3s ease,
+    background-image 0.3s ease;
+}
+
+:root {
+  --background-color: #f2f6f9;
+  --background-image: url(img/banner.png);
+  --background-grid-color: #e3e3e3;
+  --section-color: #f9fcff;
+  --section-text: #444;
+  --progress: #6bd0d2;
+  --work: #f0f0f0;
+  --input: #fff;
+  --caret: #000;
+  --show-more: #fff;
+  --button: #fff;
+  --nav-text: #000;
+  --nav: #fff;
+  --select: #f2f6f9;
+  --theme-image: url(img/light.svg);
+  --selection: #dbedff;
+  --button-hover: #f6f6f6;
+}
+
+:root:has(#theme:checked) {
+  --background-color: #121212;
+  --background-image: url(img/bannerDark.png);
+  --background-grid-color: #252525;
+  --section-color: #1e1e1e;
+  --section-text: #e0e0e0;
+  --progress: #6bd0d2;
+  --work: #2e2e2e;
+  --input: #3a3a3a;
+  --caret: #fff;
+  --show-more: #666;
+  --button: #3a3a3a;
+  --nav-text: #fff;
+  --nav: #1a1a1a;
+  --select: #5d6e7b;
+  --theme-image: url(img/dark.svg);
+  --selection: #506f8e;
+  --button-hover: #666;
+}
+
+.theme {
+  background-color: var(--section-color);
+  background-image: var(--theme-image);
+  position: fixed;
+  z-index: 10000000;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  right: 10px;
+  top: 10px;
+  border: 1px solid #a3c9ff;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: top 10px left 10px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 html {
@@ -20,7 +81,7 @@ html {
 
 header {
   height: 480px;
-  background-image: url(img/banner.png);
+  background-image: var(--background-image);
   background-size: 100% auto;
   background-position: center top;
   font-family: 'Outfit', sans-serif;
@@ -59,7 +120,7 @@ header {
 }
 
 .nav a {
-  color: #000;
+  color: var(--nav-text);
   position: relative;
   display: block;
   transition:
@@ -101,12 +162,13 @@ a:hover {
 .nav {
   position: sticky;
   top: 0;
-  background-color: #fff;
+  background-color: var(--nav);
   font-size: 20px;
   display: flex;
   padding: 10px;
   align-items: center;
   z-index: 10000;
+  transition: background-color 0.3s ease;
 }
 
 .nav .banner {
@@ -142,13 +204,16 @@ main {
 }
 
 footer {
-  background-color: #fff;
+  background-color: var(--nav);
   padding: 10px;
+  transition: background-color 0.3s ease;
 }
 
 footer .text {
+  color: var(--section-text);
   padding: 16px;
   font-size: 16px;
+  transition: color 0.5s ease;
 }
 
 section {
@@ -158,8 +223,21 @@ section {
   text-align: center;
   overflow: hidden;
   position: relative;
-  transition: max-height 0.5s ease;
   max-width: 800px;
+  border: 0 solid #a3c9ff;
+  transition:
+    box-shadow 0.5s ease,
+    border 0.2s ease,
+    max-height 0.5s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
+  box-shadow: none;
+  border: 1px solid rgba(163, 201, 255, 0);
+}
+
+section:hover {
+  box-shadow: 0 0 10px rgba(163, 201, 255, 0.3);
+  border: 1px solid #a3c9ff;
 }
 
 @media (max-width: 830px) {
@@ -176,7 +254,7 @@ section {
   height: 80px;
   width: calc(100% - 40px);
   padding: 20px;
-  background: linear-gradient(rgba(255, 255, 255, 0), #fff 50%);
+  background: linear-gradient(rgba(255, 255, 255, 0), var(--show-more) 50%);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -218,8 +296,8 @@ section {
 }
 
 .sbb {
-  background-color: #f9fcff;
-  color: #444;
+  background-color: var(--section-color);
+  color: var(--section-text);
 }
 
 p {
@@ -227,7 +305,7 @@ p {
 }
 
 ::selection {
-  background-color: #dbedff;
+  background-color: var(--selection);
   color: currentColor;
 }
 
@@ -241,10 +319,11 @@ small {
 }
 
 .work {
-  background-color: #f0f0f0;
+  background-color: var(--work);
   padding: 20px;
   margin: 15px;
   border-radius: 20px;
+  transition: background-color 0.3s ease;
 }
 
 .formula {
@@ -256,6 +335,12 @@ small {
   border-radius: 24px;
   width: calc(100% - 32px);
   border: none;
+  background-color: var(--input);
+  caret-color: var(--caret);
+  color: var(--section-text);
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .formula:focus {
@@ -266,20 +351,22 @@ small {
   display: inline-block;
   border-radius: 10000px;
   padding: 5px 1em;
-  background-color: #fff;
-  transition: background-color 0.3s ease;
   cursor: pointer;
   margin: 10px;
+  background-color: var(--button);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .button:hover {
-  background-color: #f6f6f6;
+  background-color: var(--button-hover);
 }
 
 .selectWrap {
   width: 100%;
   display: flex;
-  background-color: #fff;
+  background-color: var(--nav);
 }
 
 .selectInner {
@@ -289,31 +376,35 @@ small {
   justify-content: center;
   align-items: center;
   padding: 10px 0;
-  background-color: #f2f6f9;
+  background-color: var(--select);
   transition: background-color 0.3s ease;
 }
 
 .selectInner.selected {
-  background-color: #fff;
+  background-color: var(--nav);
 }
 
 .flashcardsWrap {
   border-radius: 20px;
   overflow: hidden;
+  background-color: var(--nav);
+  transition: background-color 0.3s ease;
 }
 
 .flashcardsScreen {
-  background-color: #fff;
+  background-color: var(--nav);
   padding: 20px;
+  transition: background-color 0.3s ease;
 }
 
 .fcsCard {
-  background-color: #f9f9f9;
+  background-color: var(--section-color);
   border-radius: 15px;
   display: flex;
   width: 100%;
   margin: 10px 0;
   flex-direction: row;
+  transition: background-color 0.3s ease;
 }
 
 .fcsWord {
@@ -387,7 +478,7 @@ c-r {
 
 .progressInner {
   width: 0;
-  background-color: #6bd0d2;
+  background-color: var(--progress);
   height: 100%;
 }
 
@@ -449,6 +540,14 @@ i-e {
   z-index: 1;
   top: 0;
   left: 0;
+}
+
+.formInput input {
+  background-color: var(--input);
+  color: var(--section-text);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .formInput input:focus {
