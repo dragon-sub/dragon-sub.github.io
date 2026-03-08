@@ -28,6 +28,7 @@ function prepareContents() {
     li.style.transform = 'none';
   });
   reciprocalLinks();
+  history();
   updateProgress();
   updateClock();
   elements.forEach(section => fade.observe(section));
@@ -99,6 +100,12 @@ function reciprocalLinks() {
       link: 'https://tadanosame.com/',
       title: 'ただのサメ | 公式サイト',
       info: 'ターコイズっぽい配色と余白が綺麗で好き。'
+    },
+    {
+      name: 'ココリーネさん',
+      link: 'https://koko2rine.com/',
+      title: 'ココリーネの趣味部屋 - PCと野獣と。',
+      info: 'ページが豪華で見飽きないこんな感じのサイトを作りたかった'
     }
   ];
   let links = "";
@@ -106,6 +113,53 @@ function reciprocalLinks() {
     links += `<p><c-l>${site.name}</c-l><c-r><a href="${site.link}">${site.title}<i-e /></a></c-r></p><small>${site.info}</small>`;
   });
   container.innerHTML = links;
+}
+
+function history() {
+  const pageHistories = document.getElementById('pageHistories');
+  const historiesData = [
+    {
+      month: '2025.12',
+      things: [
+        {date: '29', info: 'HPをリニューアル'}
+      ]
+    },
+    {
+      month: '2026.01',
+      things: [
+        {date: '01', info: 'Formula evaluationを公開'},
+        {date: '03', info: 'Flashcardsを公開'},
+        {date: '07', info: 'アイコン等追加'},
+        {date: '08', info: 'プログレスバー・時計追加'},
+        {date: '11', info: '計算機を強化'}
+      ]
+    },
+    {
+      month: '2026.02',
+      things: [
+        {date: '14', info: '長い要素の折り畳み実装'},
+        {date: '14', info: 'Find the Value of Piを公開'},
+        {date: '26', info: '要素アニメのグループ化'},
+        {date: '27', info: 'フォームの作成'}
+      ]
+    },
+    {
+      month: '2026.03',
+      things: [
+        {date: '08', info: 'テーマ変更を実装'}
+      ]
+    }
+  ];
+  let histories = '';
+  let eventMonth = '';
+  historiesData.forEach(thing =>{
+    eventMonth = thing.month;
+    histories += `<div class="st2">${eventMonth}</div>`;
+    thing.things.forEach(event => {
+      histories += `<p><c-l>${eventMonth + '.' + event.date}</c-l><c-r>${event.info}</c-r></p>`
+    });
+  });
+  pageHistories.innerHTML = histories;
 }
 
 function updateProgress() {
