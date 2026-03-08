@@ -1,3 +1,5 @@
+const realButton = document.getElementById('uploadCsv');
+const fakeButton = document.getElementById('fakeButton');
 fakeButton.onclick = () => realButton.click();
 
 let mode = 'memorize';
@@ -60,4 +62,5 @@ function update() {
   } else {
     s.innerHTML = 'test';
   };
+  setMaxHeight();
 };
