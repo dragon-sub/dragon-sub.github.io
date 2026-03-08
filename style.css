@@ -8,6 +8,10 @@ html body {
   flex-direction: column;
   background-color: #f2f6f9;
   overflow-x: hidden;
+  background-image:
+    linear-gradient(#e3e3e3 1px, transparent 1px),
+    linear-gradient(90deg, #e3e3e3 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 html {
@@ -47,7 +51,7 @@ header {
   font-weight: 200;
 }
 
-.headerWrap {
+.headerWrapper {
   background-color: rgba(255, 255, 255, 1);
   width: 100%;
   height: 100%;
@@ -105,10 +109,6 @@ a:hover {
   z-index: 10000;
 }
 
-.navFixed {
-  position: fixed;
-}
-
 .nav .banner {
   font-size: 36px;
   padding: 0 20px;
@@ -152,13 +152,20 @@ footer .text {
 }
 
 section {
-  margin: 15px;
-  padding: 20px;
+  margin: 25px auto;
+  padding: 30px;
   border-radius: 20px;
   text-align: center;
   overflow: hidden;
   position: relative;
   transition: max-height 0.5s ease;
+  max-width: 800px;
+}
+
+@media (max-width: 830px) {
+  section {
+    margin: 25px 15px;
+  }
 }
 
 .showMore {
@@ -191,7 +198,7 @@ section {
   opacity: 0;
   transform: translateY(10px);
   transition:
-    opacity 0.7s ease,
+    opacity 1s ease,
     transform 0.7s ease;
 }
 
@@ -371,7 +378,7 @@ c-r {
   white-space: normal;
 }
 
-.progressWrap {
+.progressWrapper {
   height: 2px;
   position: fixed;
   z-index: 10000000;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja" id="page">
+<html lang="ja">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
@@ -27,9 +27,9 @@
     <script src="js/pi.js" defer></script>
   </head>
   <body id="top">
-    <div class="progressWrap"><div class="progressInner" id="progressInner"></div></div>
+    <div class="progressWrapper"><div class="progressInner" id="progressInner"></div></div>
     <header>
-      <div class="headerWrap" id="headerWrap" style="background-color: rgba(255, 255, 255, 1)">
+      <div class="headerWrapper" id="headerWrapper" style="background-color: rgba(255, 255, 255, 1)">
         <div class="headerBanner">Jüw's Page</div>
         <div class="accesses" id="accesses"><span id="count"></span> Accesses</div>
         <svg class="clock" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" id="clock">
@@ -103,7 +103,7 @@
       </section>
       <section class="sbb" id="links">
         <div class="st i">Links</div>
-        <div class="st2 i">My link</div>
+        <div class="st2 i">My links</div>
         <div class="i">
           <p><c-l>X(旧Twitter)</c-l><c-r><a href="https://x.com/dragon_scratch_">ゆー(@dragon_scratch_)<i-e /></a></c-r></p>
           <p><c-l>GitHub</c-l><c-r><a href="https://github.com/dragon-sub">Jüw(dragon-sub)<i-e /></a></c-r></p>
@@ -111,25 +111,8 @@
           <p><c-l>Meax</c-l><c-r><a href="https://meax.jp/profile/269">ゆー(@269)<i-e /></a></c-r></p>
           <p><c-l>Atten</c-l><c-r><a href="https://atten.win/users/dragon_sub">@dragon_sub<i-e /></a></c-r></p>
         </div>
-        <div class="st2 i">Reciprocal link</div>
-        <div class="i">
-          <p><c-l>やなぎさん</c-l><c-r><a href="https://yana-lp.f5.si/">やなぎのホームページ<i-e /></a></c-r></p>
-          <small>コントラストがあって見やすい</small>
-          <p><c-l>風止渚さん</c-l><c-r><a href="https://kzng.f5.si/">風止渚のホームページ<i-e /></a></c-r></p>
-          <small>私の尊敬してる方。</small>
-          <p><c-l>zepto_0321氏</c-l><c-r><a href="https://zepto-0321.github.io/zepto_page/">zepto_page<i-e /></a></c-r></p>
-          <small>私のリア友。いろんなこと知ってる</small>
-          <p><c-l>うまいだんごさん</c-l><c-r><a href="https://umaii.f5.si/">うまいだんご<i-e /></a></c-r></p>
-          <small>アプリとか作ってるすごい人。ページの一番最初から伝わるC#信者感</small>
-          <p><c-l>n0xaさん</c-l><c-r><a href="https://n0xa.f5.si/">自己紹介<i-e /></a></c-r></p>
-          <small>この人もC#とか書くすごい人。グラデーションがきれい。</small>
-          <p><c-l>ActiveTKさん</c-l><c-r><a href="https://profile.activetk.jp/">ActiveTK. - ActiveTK.jp<i-e /></a></c-r></p>
-          <small>とにかくすごい方。私の憧れ。</small>
-          <p><c-l>256serverさん</c-l><c-r><a href="https://256server.com/">256server | Home<i-e /></a></c-r></p>
-          <small>アクセス数と相互リンクの数が多くて羨ましい</small>
-          <p><c-l>彩音さん</c-l><c-r><a href="https://www.ayane0857.net/">メインページ | 彩音のサイト<i-e /></a></c-r></p>
-          <small>誇張しすぎない桃色とか洗練されたUIがおしゃれ</small>
-        </div>
+        <div class="st2 i">Reciprocal links</div>
+        <div class="i" id="reciprocalLinks"></div>
         <p class="i">絶賛募集中です。<a href="https://x.com/dragon_scratch_">ここ</a>からどうぞ。</p>
       </section>
       <section class="sbb a" id="history">
@@ -187,7 +170,7 @@
         <p>Images: Photo by zyutazyudasu (CC BY-SA 2.0)</p>
         <p>Fonts: Outfit, Noto Sans JP</p>
         <p>Icons: <a href="https://icons8.com/icon/83168/external-link">External link</a> icon by <a href="https://icons8.com/">icons8<i-e /></a></p>
-        <p>Last updated: 2026/02/27</p>
+        <p>Last updated: <span id="lastUpdated"></span></p>
       </div>
       <div class="footerLogo">
         <a href="https://scratch.mit.edu/users/dragon_sub"><img src="img/logo/scratch.svg"></a>

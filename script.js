@@ -1,29 +1,118 @@
-const page = document.getElementById('page');
+const lastUpdated = '2026/03/08';
+const page = document.querySelector('html');
 const bar = document.getElementById('progressInner');
+const clock = document.getElementById('clock');
 const ho = document.getElementById('hour');
 const mi = document.getElementById('minute');
 const se = document.getElementById('second');
-const clock = document.getElementById('clock');
+const realSubmit = document.getElementById('realSubmit');
+const fakeSubmit = document.getElementById('fakeSubmit');
+fakeSubmit.onclick = () => realSubmit.click();
+const loading = document.querySelector('.loading');
 
-window.addEventListener('load', () => {
-  updateClock();
-  document.getElementById('headerWrap').style.backgroundColor = 'rgba(255, 255, 255, 0)';
+function prepareContents() {
   const banner = document.querySelector('.banner');
+  const headerWrapper = document.getElementById('headerWrapper');
+  const items = document.querySelectorAll('.nav li')
+
   banner.style.opacity = 1;
   banner.style.transform = 'none';
-  const items = document.querySelectorAll('.nav li');
+  headerWrapper.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+
   items.forEach((li, i) => {
     li.style.transitionDelay = `${i * 0.1 + 0.5}s`;
     li.style.opacity = 1;
     li.style.transform = 'none';
   });
-});
+  reciprocalLinks();
+  updateProgress();
+  updateClock();
+  elements.forEach(section => fade.observe(section));
+  setShowMore();
+  document.querySelectorAll('.showMore').forEach(showMoreButton => {
+    showMoreButton.addEventListener('click', (event) => {
+      const target = event.target;
+      const targetParent = target.closest('section');
+      targetParent.classList.remove('shorten');
+      target.classList.add('delete');
+    });
+  });
+  document.getElementById('lastUpdated').innerText = lastUpdated;
+}
 
-function progress() {
+function reciprocalLinks() {
+  const container = document.getElementById('reciprocalLinks');
+  const linksData = [
+    {
+      name: 'やなぎさん',
+      link: 'https://yana-lp.f5.si/',
+      title: 'やなぎのホームページ',
+      info: 'コントラストがあって見やすい'
+    },
+    {
+      name: '風止渚さん',
+      link: 'https://kzng.f5.si/',
+      title: '風止渚のホームページ',
+      info: '私の尊敬してる方。',
+    },
+    {
+      name: 'zepto_0321氏',
+      link: 'https://zepto-0321.github.io/zepto_page/',
+      title: 'zepto_page',
+      info: '私のリア友。いろんなこと知ってる'
+    },
+    {
+      name: 'うまいだんごさん',
+      link: 'https://umaii.f5.si/',
+      title: 'うまいだんご',
+      info: 'アプリとか作ってるすごい人。ページの一番最初から伝わるC#信者感'
+    },
+    {
+      name: 'n0xaさん',
+      link: 'https://n0xa.f5.si/',
+      title: '自己紹介',
+      info: 'この人もC#とか書くすごい人。グラデーションがきれい。'
+    },
+    {
+      name: 'ActiveTKさん',
+      link: 'https://profile.activetk.jp/',
+      title: 'ActiveTK. - ActiveTK.jp',
+      info: 'とにかくすごい方。私の憧れ。'
+    },
+    {
+      name: '256serverさん',
+      link: 'https://256server.com/',
+      title: '256server｜home',
+      info: 'アクセス数と相互リンクの数が多くて羨ましい'
+    },
+    {
+      name: '彩音さん',
+      link: 'https://www.ayane0857.net/',
+      title: 'メインページ | 彩音のサイト',
+      info: '誇張しすぎない桃色とか洗練されたUIがおしゃれ'
+    },
+    {
+      name: 'ただのサメさん',
+      link: 'https://tadanosame.com/',
+      title: 'ただのサメ | 公式サイト',
+      info: 'ターコイズっぽい配色と余白が綺麗で好き。'
+    }
+  ];
+  let links = "";
+  linksData.forEach(site => {
+    links += `<p><c-l>${site.name}</c-l><c-r><a href="${site.link}">${site.title}<i-e /></a></c-r></p><small>${site.info}</small>`;
+  });
+  container.innerHTML = links;
+}
+
+function updateProgress() {
   const point = page.scrollHeight - page.clientHeight - 2;
   const t = page.scrollTop / point * 100;
+
   bar.style.width = t + '%';
   bar.title = t + '%';
+
+  window.requestAnimationFrame(updateProgress);
 }
 
 const elements = document.querySelectorAll('.i');
@@ -48,7 +137,7 @@ function updateClock() {
   const second = d.getSeconds();
   ho.setAttribute('transform', `rotate(${(hour * 30) + (minute / 2) + (second / 120)} 50 50)`);
   mi.setAttribute('transform', `rotate(${(minute * 6) + (second / 10)} 50 50)`);
-  se.setAttribute('transform', `rotate(${second * 6} 50 50)`);
+  se.setAttribute('transform', `rotate(${second * 6} 50 50)`)
 }
 
 function setShowMore() {
@@ -56,7 +145,7 @@ function setShowMore() {
   const showMore = document.createElement('div');
   showMore.innerHTML = 'Show More';
   showMore.className = 'showMore';
-  parts = document.querySelectorAll('section');
+  let parts = document.querySelectorAll('section');
   parts.forEach(part => {
     if (part.scrollHeight > limit) {
       part.style.maxHeight = part.scrollHeight - 40 + 'px';
@@ -66,28 +155,15 @@ function setShowMore() {
   });
 }
 
-setInterval(updateClock, 1000);
-progress();
-window.addEventListener('scroll', progress);
-elements.forEach(section => fade.observe(section));
-const realButton = document.getElementById('uploadCsv');
-const fakeButton = document.getElementById('fakeButton');
-const realSubmit = document.getElementById('realSubmit');
-const fakeSubmit = document.getElementById('fakeSubmit');
-const loading = document.querySelector('.loading');
-fakeSubmit.onclick = () => realSubmit.click();
-setShowMore();
-
-document.querySelectorAll('.showMore').forEach(showMoreButton => {
-  showMoreButton.addEventListener('click', (event) => {
-    const target = event.target;
-    const targetParent = target.closest('section');
-    targetParent.classList.remove('shorten');
-    target.classList.add('delete');
+function setMaxHeight() {
+  const limit = window.innerHeight;
+  let parts = document.querySelectorAll('section');
+  parts.forEach(part => {
+    if (part.scrollHeight > limit) {
+      part.style.maxHeight = part.scrollHeight - 40 + 'px';
+    }
   });
-});
-
-const endpoint = "https://script.google.com/macros/s/AKfycbzCpdCKFv_kz4XUXTESFb46pJSjHHD4eRmd77ZCyub4OpitIVYp6UAay0vFls53d9jB/exec";
+}
 
 document.getElementById("form")
   .addEventListener("submit", async (e) => {
@@ -100,8 +176,12 @@ document.getElementById("form")
       method: "POST",
       body: JSON.stringify(data)
     })
-    alert("送信しました");
+    alert('送信しました');
     e.target.reset();
     realSubmit.disabled = 'true';
     loading.height = 0;
 });
+
+window.addEventListener('load', prepareContents);
+
+window.setInterval(updateClock, 1000);
