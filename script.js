@@ -11,6 +11,7 @@ fakeSubmit.onclick = () => realSubmit.click();
 const loading = document.querySelector('.loading');
 const realTheme = document.getElementById('theme');
 const fakeTheme = document.querySelector('.theme');
+const endpoint = 'https://script.google.com/macros/s/AKfycbzCpdCKFv_kz4XUXTESFb46pJSjHHD4eRmd77ZCyub4OpitIVYp6UAay0vFls53d9jB/exec';
 fakeTheme.onclick = () => realTheme.click();
 
 function prepareContents() {
@@ -75,7 +76,7 @@ function reciprocalLinks() {
       name: 'n0xaさん',
       link: 'https://n0xa.f5.si/',
       title: '自己紹介',
-      info: 'この人もC#とか書くすごい人。グラデーションがきれい。'
+      info: 'モダンでかっこいいサイト。淡い背景がいい'
     },
     {
       name: 'ActiveTKさん',
@@ -106,6 +107,12 @@ function reciprocalLinks() {
       link: 'https://koko2rine.com/',
       title: 'ココリーネの趣味部屋 - PCと野獣と。',
       info: 'ページが豪華で見飽きないこんな感じのサイトを作りたかった'
+    },
+    {
+      name: 'ちくにざきさん',
+      link: 'https://157.f5.si/',
+      title: 'ちくにざき',
+      info: '自宅鯖でやってるらしい。'
     }
   ];
   let links = "";
@@ -164,10 +171,10 @@ function history() {
 
 function updateProgress() {
   const point = page.scrollHeight - page.clientHeight - 2;
-  const t = page.scrollTop / point * 100;
+  const t = page.scrollTop / point;
 
-  bar.style.width = t + '%';
-  bar.title = t + '%';
+  bar.style.transform = `scaleX(${t})`;
+  bar.title = t * 100 + '%';
 
   window.requestAnimationFrame(updateProgress);
 }

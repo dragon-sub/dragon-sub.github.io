@@ -477,9 +477,10 @@ c-r {
 }
 
 .progressInner {
-  width: 0;
+  width: 100%;
   background-color: var(--progress);
   height: 100%;
+  transform-origin: left;
 }
 
 .clock {
