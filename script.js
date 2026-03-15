@@ -113,6 +113,12 @@ function reciprocalLinks() {
       link: 'https://157.f5.si/',
       title: 'ちくにざき',
       info: '自宅鯖でやってるらしい。'
+    },
+    {
+      name: 'ko-mathさん',
+      link: 'https://ko-math.f5.si/',
+      title: 'ko-math homepage',
+      info: 'アテ友のサイトです。BFの実行環境とか作っててすごい'
     }
   ];
   let links = "";
@@ -153,7 +159,8 @@ function history() {
     {
       month: '2026.03',
       things: [
-        {date: '08', info: 'テーマ変更を実装'}
+        {date: '08', info: 'テーマ変更を実装'},
+        {date: '15', info: 'gridを葬り軽量化'}
       ]
     }
   ];

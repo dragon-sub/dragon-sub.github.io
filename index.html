@@ -28,7 +28,7 @@
     <script src="js/pi.js" defer></script>
   </head>
   <body id="top">
-    <div class="progressWrapper"><div class="progressInner" id="progressInner"></div></div>
+    <div class="progressWrapper"><div class="progressInner" id="progressInner" style="transform: scaleX(0);"></div></div>
     <div class="theme"></div>
     <header>
       <div class="headerWrapper" id="headerWrapper" style="background-color: rgba(255, 255, 255, 1)">
@@ -55,32 +55,30 @@
     </nav>
     <main>
       <input type="checkbox" id="theme" style="display: none;">
-      <section class="sbb" id="profile">
-        <div class="st i">Profile</div>
-        <div class="i">皆さんはじめまして、ゆーです。</div>
-        <div class="st2 i">Self introduction</div>
-        <div class="i">
+      <section class="sbb i" id="profile">
+        <div class="st">Profile</div>
+        <div>皆さんはじめまして、ゆーです。</div>
+        <div class="st2">Self introduction</div>
+        <div>
           プログラミング・言語学・音声学・ルービックキューブ<br>
           に興味がある椎名林檎・東京事変オタクです。<br>
           今は日本語・中国語・英語・フランス語・スペイン語を学んでいます。<br>
         </div>
       </section>
-      <section class="sbb" id="workingOn">
-        <div class="st i">Working on</div>
-        <div class="i">
-          <p>人工言語「@ski」の開発</p>
-          <p>日, 中, 英, 仏, 西の勉強</p>
-        </div>
+      <section class="sbb i" id="workingOn">
+        <div class="st">Working on</div>
+        <p>人工言語「@ski」の開発</p>
+        <p>日, 中, 英, 仏, 西の勉強</p>
       </section>
-      <section class="sbb" id="works">
-        <div class="st i">Works</div>
-        <p class="i">JSの練習のために外部ライブラリを使わずに作った作品集です。</p>
-        <div class="i work">
+      <section class="sbb i" id="works">
+        <div class="st">Works</div>
+        <p>JSの練習のために外部ライブラリを使わずに作った作品集です。</p>
+        <div class="work">
           <div class="st2">Formula evaluation</div>
           <input class="formula" placeholder="Example: (sin(pi()/6)^2+cos(pi()/3))-gcd(6,4)%3" id="formula">
           <p>=<span id="answer"></span></p>
         </div>
-        <div class="i work">
+        <div class="work">
           <div class="st2">Flashcards</div>
           <input type="file" accept=".csv" style="display: none;" id="uploadCsv">
           <div class="button" id="fakeButton">Upload .csv</div>
@@ -95,7 +93,7 @@
             </div>
           </div>
         </div>
-        <div class="i work">
+        <div class="work">
           <div class="st2">Find the Value of Pi</div>
           <div>
             <div class="button" id="startMonteCarlo">Start</div>
@@ -104,32 +102,32 @@
           <canvas width="800" height="900" class="monteCarlo" id="monteCarlo" />
         </div>
       </section>
-      <section class="sbb" id="links">
-        <div class="st i">Links</div>
-        <div class="st2 i">My links</div>
-        <div class="i">
+      <section class="sbb i" id="links">
+        <div class="st">Links</div>
+        <div class="st2">My links</div>
+        <div>
           <p><c-l>X(旧Twitter)</c-l><c-r><a href="https://x.com/dragon_scratch_">ゆー(@dragon_scratch_)<i-e /></a></c-r></p>
           <p><c-l>GitHub</c-l><c-r><a href="https://github.com/dragon-sub">Jüw(dragon-sub)<i-e /></a></c-r></p>
           <p><c-l>Scratch</c-l><c-r><a href="https://scratch.mid.edu/users/dragon_sub">dragon_sub<i-e /></a></c-r></p>
           <p><c-l>Meax</c-l><c-r><a href="https://meax.jp/profile/269">ゆー(@269)<i-e /></a></c-r></p>
           <p><c-l>Atten</c-l><c-r><a href="https://atten.win/users/dragon_sub">@dragon_sub<i-e /></a></c-r></p>
         </div>
-        <div class="st2 i">Reciprocal links</div>
-        <div class="i" id="reciprocalLinks"></div>
-        <p class="i">絶賛募集中です。<a href="https://x.com/dragon_scratch_">ここ</a>からどうぞ。</p>
+        <div class="st2">Reciprocal links</div>
+        <div id="reciprocalLinks"></div>
+        <p>絶賛募集中です。<a href="https://x.com/dragon_scratch_">ここ</a>からどうぞ。</p>
       </section>
-      <section class="sbb a" id="history">
-        <div class="st i">History</div>
-        <div class="i" id="pageHistories"></div>
+      <section class="sbb a i" id="history">
+        <div class="st">History</div>
+        <div id="pageHistories"></div>
       </section>
-      <section class="sbb" id="contact">
-        <div class="st i">Contact</div>
-        <small class="i">
+      <section class="sbb i" id="contact">
+        <div class="st">Contact</div>
+        <small>
           Apps ScriptとGoogle Spreadsheetを用いたフォームです。<br>
           未読メッセージが100件を超えている場合、データの受け取りは拒否されます。<br>
           バグ報告や相互リンク申請など気軽にどうぞ。
         </small>
-        <div class="i">
+        <div>
           <form id="form">
             <div class="formInput">
               <input name="name" placeholder=" " required>
@@ -151,7 +149,7 @@
       </section>
     </main>
     <footer>
-      <div class="text i">
+      <div class="text">
         <p>Images: Photo by zyutazyudasu (CC BY-SA 2.0)</p>
         <p>Fonts: Outfit, Noto Sans JP</p>
         <p>Icons: <a href="https://icons8.com/icon/83168/external-link">External link</a> icon by <a href="https://icons8.com/">icons8<i-e /></a></p>
