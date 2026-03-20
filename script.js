@@ -1,4 +1,4 @@
-const lastUpdated = '2026/03/19';
+const lastUpdated = '2026/03/20';
 const page = document.querySelector('html');
 const bar = document.getElementById('progressInner');
 const clock = document.getElementById('clock');
@@ -163,7 +163,8 @@ function history() {
         {date: '08', info: 'テーマ変更を実装'},
         {date: '15', info: 'gridを葬り軽量化'},
         {date: '19', info: 'フォントをOutfit→Interに'},
-        {date: '19', info: 'Recommended Songを追加'}
+        {date: '19', info: 'Recommended Songを追加'},
+        {date: '20', info: 'バナーをpngからwebpに変更'}
       ]
     }
   ];
