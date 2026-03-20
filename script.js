@@ -1,4 +1,4 @@
-const lastUpdated = '2026/03/08';
+const lastUpdated = '2026/03/19';
 const page = document.querySelector('html');
 const bar = document.getElementById('progressInner');
 const clock = document.getElementById('clock');
@@ -38,6 +38,7 @@ function prepareContents() {
     showMoreButton.addEventListener('click', (event) => {
       const target = event.target;
       const targetParent = target.closest('section');
+      targetParent.style.maxHeight = targetParent.scrollHeight + 'px';
       targetParent.classList.remove('shorten');
       target.classList.add('delete');
     });
@@ -160,7 +161,9 @@ function history() {
       month: '2026.03',
       things: [
         {date: '08', info: 'テーマ変更を実装'},
-        {date: '15', info: 'gridを葬り軽量化'}
+        {date: '15', info: 'gridを葬り軽量化'},
+        {date: '19', info: 'フォントをOutfit→Interに'},
+        {date: '19', info: 'Recommended Songを追加'}
       ]
     }
   ];
@@ -177,7 +180,7 @@ function history() {
 }
 
 function updateProgress() {
-  const point = page.scrollHeight - page.clientHeight - 2;
+  const point = page.scrollHeight - page.clientHeight;
   const t = page.scrollTop / point;
 
   bar.style.transform = `scaleX(${t})`;
@@ -231,7 +234,7 @@ function setMaxHeight() {
   let parts = document.querySelectorAll('section');
   parts.forEach(part => {
     if (part.scrollHeight > limit) {
-      part.style.maxHeight = part.scrollHeight - 40 + 'px';
+      part.style.maxHeight = part.scrollHeight + 'px';
     }
   });
 }

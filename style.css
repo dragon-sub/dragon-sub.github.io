@@ -1,5 +1,5 @@
 html body {
-  font-family: "Outfit", "Noto Sans JP", sans-serif;
+  font-family: "Inter", "Noto Sans JP", sans-serif;
   font-weight: 200;
   padding: 0;
   margin: 0;
@@ -77,7 +77,7 @@ header {
   background-image: var(--background-image);
   background-size: 100% auto;
   background-position: center top;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 100;
   color: #fff;
 }
@@ -102,7 +102,7 @@ header {
 .accesses {
   font-size: 20px;
   padding-left: 40px;
-  font-weight: 200;
+  font-weight: 100;
 }
 
 .headerWrapper {
@@ -241,7 +241,7 @@ section.i {
     transform 0.7s ease,
     box-shadow 0.5s ease,
     border 0.2s ease,
-    max-height 0.5s ease,
+    max-height 1s ease,
     background-color 0.3s ease,
     color 0.3s ease;
 }
@@ -267,6 +267,7 @@ section.i {
   cursor: pointer;
   transition: opacity 0.3s ease;
   opacity: 1;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .delete {
@@ -294,11 +295,13 @@ section.i {
 .st {
   font-size: 30px;
   margin-bottom: 20px;
+  font-weight: 180;
 }
 
 .st2 {
   font-size: 24px;
-  margin: 15px 0;
+  margin: 20px 0 10px 0;
+  font-weight: 180;
 }
 
 .sbb {
@@ -333,7 +336,7 @@ small {
 }
 
 .formula {
-  font-family: "Outfit", "Noto Sans JP", sans-serif;
+  font-family: "Inter", "Noto Sans JP", sans-serif;
   font-weight: 200;
   font-size: 16px;
   height: 24px;
@@ -363,6 +366,7 @@ small {
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
+  user-select: none;
 }
 
 .button:hover {
@@ -535,7 +539,7 @@ i-e {
 
 .formInput input {
   position: absolute;
-  font-family: "Outfit", "Noto Sans JP", sans-serif;
+  font-family: "Inter", "Noto Sans JP", sans-serif;
   font-weight: 200;
   font-size: 16px;
   height: 24px;

@@ -16,7 +16,7 @@
     <title>Jüw's Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <link href="https://drsb.f5.si/favicon.ico" rel="icon">
     <link href="img/bannerDark.png" rel="preload" as="image">
@@ -26,6 +26,7 @@
     <script src="js/formulaEvaluation.js" defer></script>
     <script src="js/flashcards.js" defer></script>
     <script src="js/pi.js" defer></script>
+    <script src="js/recommendedSongs.js" defer></script>
   </head>
   <body id="top">
     <div class="progressWrapper"><div class="progressInner" id="progressInner" style="transform: scaleX(0);"></div></div>
@@ -64,6 +65,11 @@
           に興味がある椎名林檎・東京事変オタクです。<br>
           今は日本語・中国語・英語・フランス語・スペイン語を学んでいます。<br>
         </div>
+        <div class="st2">Recommended Song</div>
+        <i id="song"></i>
+        <i><small id="album"></small></i>
+        <p><div class="button" id="changeSong">Change Song</div></p>
+        <small>これはJavaScriptでランダム更新されます。</small>
       </section>
       <section class="sbb i" id="workingOn">
         <div class="st">Working on</div>
@@ -151,7 +157,7 @@
     <footer>
       <div class="text">
         <p>Images: Photo by zyutazyudasu (CC BY-SA 2.0)</p>
-        <p>Fonts: Outfit, Noto Sans JP</p>
+        <p>Fonts: Inter, Noto Sans JP</p>
         <p>Icons: <a href="https://icons8.com/icon/83168/external-link">External link</a> icon by <a href="https://icons8.com/">icons8<i-e /></a></p>
         <p>Last updated: <span id="lastUpdated"></span></p>
       </div>
