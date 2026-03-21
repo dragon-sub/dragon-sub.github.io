@@ -1,14 +1,16 @@
 const formula = document.getElementById('formula');
 const answer = document.getElementById('answer');
 const arg0 = ['pi', 'e']
-const arg1 = ['sqrt', 'sin', 'cos', 'tan', 'abs', 'asin', 'acos', 'atan', 'sinh', 'cosh', 'tanh', 'log'];
+const arg1 = ['sqrt', 'sin', 'cos', 'tan', 'abs', 'asin', 'acos', 'atan', 'sinh', 'cosh', 'tanh', 'log', 'attenRate'];
 const arg2 = ['max', 'min', 'gcd', 'lcm'];
 const funs = arg0.concat(arg1, arg2);
+let string = false;
 
-function evaluate(input) {
+async function evaluate(input) {
+  string = false;
   let token = [];
   let tokenType = [];
-  let lastCharType = 'null';
+  let lastCharType = null;
   let charType = '';
   let char = '';
   for (let i = 0; i < input.length; i++) {
@@ -27,8 +29,8 @@ function evaluate(input) {
   let type = '';
   for (let i = 0; i < token.length; i++) {
     type = tokenType[i];
-    if (type == 'number') {
-      queue.push(token[i]);
+    if (type == 'number' || type == 'string') {
+      queue.push(token[i].includes('"') ? token[i] : +token[i]);
     } else if (type == 'function') {
       stack.push(token[i]);
     } else if (type == 'openBracket') {
@@ -62,8 +64,8 @@ function evaluate(input) {
     lastChar = calc[calc.length - 1];
     if ('+-*/^%'.includes(lastChar) || arg2.includes(lastChar)) {
       l = calc.pop();
-      const b = +calc.pop();
-      const a = +calc.pop();
+      const b = calc.pop();
+      const a = calc.pop();
       if (l == '+') calc.push(a + b);
       if (l == '-') calc.push(a - b);
       if (l == '*') calc.push(a * b);
@@ -77,7 +79,7 @@ function evaluate(input) {
     };
     if (arg1.includes(lastChar)) {
       l = calc.pop();
-      const a = +calc.pop();
+      const a = calc.pop();
       if (l == 'sqrt') calc.push(Math.sqrt(a));
       if (l == 'sin') calc.push(Math.sin(a));
       if (l == 'cos') calc.push(Math.cos(a));
@@ -90,6 +92,7 @@ function evaluate(input) {
       if (l == 'cosh') calc.push(Math.cosh(a));
       if (l == 'tanh') calc.push(Math.tanh(a));
       if (l == 'log') calc.push(Math.log(a));
+      if (l == 'attenRate') calc.push(await attenRate(normalize(a)));
     };
     if (arg0.includes(lastChar)) {
       l = calc.pop();
@@ -101,13 +104,18 @@ function evaluate(input) {
 };
 
 function getCharType(char, lastChar) {
+  if (char == '"') {
+    string = !string;
+    return 'string';
+  }
+  if (string == true) return 'string';
   if ('+-*/^%'.includes(char)){
     if(!(char == '-' && '(+-*/^%'.includes(lastChar))) return 'operator';
   };
   if (char == '(') return 'openBracket';
   if (char == ')') return 'closeBracket';
   if (char == ',') return 'comma';
-  if (/[A-Za-z]/.test(char)) return 'function';
+  if (/[A-Za-z]/.test(char) && string == false) return 'function';
   return 'number';
 };
 
@@ -123,10 +131,9 @@ function pri(operator) {
   return data[operator] || {p: 0, join: 'L'};
 };
 
-formula.addEventListener('input', () => {
-  answer.innerText = evaluate(formula.value.replaceAll(' ', ''));
+formula.addEventListener('input', async () => {
+  answer.innerText = await evaluate(formula.value.replaceAll(' ', ''));
 });
-
 
 function gcd(a1, a2) {
   let a = a1;
@@ -141,3 +148,21 @@ function gcd(a1, a2) {
   };
   return b;
 };
+
+function normalize(s) {
+  return s.replaceAll('"', '');
+}
+
+async function attenRate(user) {
+  return fetch(`https://api.atten.win/users/${user}`)
+    .then(res => res.json())
+    .then(userData => {
+      const posts = userData['post_count'];
+      const joinedAt = userData['joined_at'].split('T')[0];
+      const target = new Date(joinedAt);
+      const today = new Date();
+      const difMs = today - target;
+      const days = difMs / 86400000;
+      return posts / days;
+    });
+}
