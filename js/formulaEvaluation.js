@@ -158,7 +158,7 @@ async function attenRate(user) {
     .then(res => res.json())
     .then(userData => {
       const posts = userData['post_count'];
-      const joinedAt = userData['joined_at'].split('T')[0];
+      const joinedAt = userData['joined_at'].split('Z')[0];
       const target = new Date(joinedAt);
       const today = new Date();
       const difMs = today - target;
