@@ -1,4 +1,4 @@
-const lastUpdated = '2026/03/20';
+const lastUpdated = '2026/03/28';
 const page = document.querySelector('html');
 const bar = document.getElementById('progressInner');
 const clock = document.getElementById('clock');
@@ -60,6 +60,7 @@ function reciprocalLinks() {
       link: 'https://kzng.f5.si/',
       title: '風止渚のホームページ',
       info: '私の尊敬してる方。',
+      banner: 'https://kzng.f5.si/Banner.png'
     },
     {
       name: 'zepto_0321氏',
@@ -71,7 +72,8 @@ function reciprocalLinks() {
       name: 'うまいだんごさん',
       link: 'https://umaii.f5.si/',
       title: 'うまいだんご',
-      info: 'アプリとか作ってるすごい人。ページの一番最初から伝わるC#信者感'
+      info: 'アプリとか作ってるすごい人。ページの一番最初から伝わるC#信者感',
+      banner: 'https://umaii.f5.si/img/banner.png'
     },
     {
       name: 'n0xaさん',
@@ -89,7 +91,8 @@ function reciprocalLinks() {
       name: '256serverさん',
       link: 'https://256server.com/',
       title: '256server｜home',
-      info: 'アクセス数と相互リンクの数が多くて羨ましい'
+      info: 'アクセス数と相互リンクの数が多くて羨ましい',
+      banner: 'https://256server.com/image/banner/256server.png'
     },
     {
       name: '彩音さん',
@@ -120,11 +123,20 @@ function reciprocalLinks() {
       link: 'https://ko-math.f5.si/',
       title: 'ko-math homepage',
       info: 'アテ友のサイトです。BFの実行環境とか作っててすごい'
+    },
+    {
+      name: 'lpv_vqlさん',
+      link: 'https://lpv-vql.github.io/',
+      title: 'lpv_vql',
+      info: '私の尊敬してる方です。Scratchもすごいので是非ご覧なさっては。'
     }
   ];
   let links = "";
   linksData.forEach(site => {
-    links += `<p><c-l>${site.name}</c-l><c-r><a href="${site.link}">${site.title}<i-e /></a></c-r></p><small>${site.info}</small>`;
+    links += `
+  <p><c-l>${site.name}</c-l><c-r><a href="${site.link}">${site.title}</a></c-r></p>
+  ${site.banner ? `<a href="${site.link}"><img src="${site.banner}" width="140"></a>` : ``}
+  <small>${site.info}</small>`;
   });
   container.innerHTML = links;
 }
@@ -164,7 +176,9 @@ function history() {
         {date: '15', info: 'gridを葬り軽量化'},
         {date: '19', info: 'フォントをOutfit→Interに'},
         {date: '19', info: 'Recommended Songを追加'},
-        {date: '20', info: 'バナーをpngからwebpに変更'}
+        {date: '20', info: 'ヒーローバナーをpngからwebpに変更'},
+        {date: '26', info: '相互リンク用バナーを作成'},
+        {date: '28', info: '一部多言語対応化'}
       ]
     }
   ];

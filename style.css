@@ -298,6 +298,12 @@ section.i {
   font-weight: 180;
 }
 
+.st3 {
+  font-size: 20px;
+  margin: 10px 0 5px 0;
+  font-weight: 180;
+}
+
 .sbb {
   background-color: var(--section-color);
   color: var(--section-text);
@@ -586,4 +592,78 @@ i-e {
 
 .loading {
   transition: height 0.4s ease;
+}
+
+pre {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  overflow-x: auto;
+  background-color: var(--nav);
+  transition: background-color 0.3s ease;
+}
+
+.languageFixed {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 10000000000000;
+  width: 128px;
+}
+
+.languageSwitch {
+  height: 40px;
+  padding: 4px;
+  border-radius: 48px;
+  position: relative;
+  background-color: var(--background-color);
+  border: 1px solid #a3c9ff;
+  color: var(--section-text);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.languageWrapper {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  opacity: 1;
+}
+
+.languageInner {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.languageSelector {
+  opacity: 1;
+  position: absolute;
+  z-index: 1;
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  transform: translateX(var(--language));
+  background-color: var(--input);
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.japanese {
+  --language: 0;
+}
+
+.english {
+  --language: 40px;
+}
+
+.french {
+  --language: 80px;
 }

@@ -13,7 +13,7 @@
     <meta property="og:locale" content="ja_JP">
     <meta property="og:type" content="website">
     <meta property="twitter:card" content="summary">
-    <title>Jüw's Page</title>
+    <title id="meta_titl">Jüw's Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
@@ -23,6 +23,7 @@
     <link rel="apple-touch-icon" href="https://drsb.f5.si/favicon.ico" sizes="180x180">
     <script src="https://counter.nanasi-rasi.net/counter.js" defer></script>
     <script src="script.js" defer></script>
+    <script src="i18n.js" defer></script>
     <script src="js/formulaEvaluation.js" defer></script>
     <script src="js/flashcards.js" defer></script>
     <script src="js/pi.js" defer></script>
@@ -31,10 +32,20 @@
   <body id="top">
     <div class="progressWrapper"><div class="progressInner" id="progressInner" style="transform: scaleX(0);"></div></div>
     <div class="theme"></div>
+    <div class="languageFixed">
+      <div class="languageSwitch" id="languageSwitch">
+        <div class="languageWrapper">
+          <div class="languageInner" id="japanese">JA</div>
+          <div class="languageInner" id="english">EN</div>
+          <div class="languageInner" id="french">FR</div>
+        </div>
+        <div class="languageSelector"></div>
+      </div>
+    </div>
     <header>
       <div class="headerWrapper" id="headerWrapper" style="background-color: rgba(255, 255, 255, 1)">
-        <div class="headerBanner">Jüw's Page</div>
-        <div class="accesses" id="accesses"><span id="count"></span> Accesses</div>
+        <div class="headerBanner" id="head_titl">Jüw's Page</div>
+        <div class="accesses" id="accesses"><span id="count"></span><span id="head_acce"> Accesses</span></div>
         <svg class="clock" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" id="clock">
           <circle cx="50" cy="50" r="49" fill="rgba(255, 255, 255, 0.3)" stroke="#fff" stroke-width="1" />
           <rect x="49.5" y="15" width="1" height="35" fill="#fff" id="minute" transform="rotate(0 50 50)" />
@@ -44,63 +55,63 @@
       </div>
     </header>
     <nav class="nav" id="nav">
-      <a class="banner" href="#top">Jüw's Page</a>
+      <a class="banner" href="#top" id="nav_top">Jüw's Page</a>
       <ul>
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#workingOn">Working on</a></li>
-        <li><a href="#works">Works</a></li>
-        <li><a href="#links">Links</a></li>
-        <li><a href="#history">History</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#profile" id="nav_prof">Profile</a></li>
+        <li><a href="#workingOn" id="nav_workOn">Working on</a></li>
+        <li><a href="#works" id="nav_work">Works</a></li>
+        <li><a href="#links" id="nav_link">Links</a></li>
+        <li><a href="#history" id="nav_hist">History</a></li>
+        <li><a href="#contact" id="nav_cont">Contact</a></li>
       </ul>
     </nav>
     <main>
       <input type="checkbox" id="theme" style="display: none;">
       <section class="sbb i" id="profile">
-        <div class="st">Profile</div>
-        <div>皆さんはじめまして、ゆーです。</div>
-        <div class="st2">Self introduction</div>
-        <div>
-          プログラミング・言語学・音声学・ルービックキューブ<br>
-          に興味がある椎名林檎・東京事変オタクです。<br>
-          今は日本語・中国語・英語・フランス語・スペイン語を学んでいます。<br>
+        <div class="st" id="prof_titl">Profile</div>
+        <div id="prof_0001">皆さんはじめまして、ゆーです。</div>
+        <div class="st2" id="prof_self">Self introduction</div>
+        <div id="prof_0002">
+          プログラミング・言語学・音声学・ルービックキューブ
+          に興味がある椎名林檎・東京事変オタクです。
+          今は日本語・中国語・英語・フランス語・スペイン語を学んでいます。
         </div>
-        <div class="st2">Recommended Song</div>
+        <div class="st2" id="prof_reco">Recommended Song</div>
         <i id="song"></i>
         <i><small id="album"></small></i>
         <p><div class="button" id="changeSong">Change Song</div></p>
-        <small>これはJavaScriptでランダム更新されます。</small>
+        <small id="prof_0003">これはJavaScriptでランダム更新されます。</small>
       </section>
       <section class="sbb i" id="workingOn">
-        <div class="st">Working on</div>
-        <p>人工言語「@ski」の開発</p>
-        <p>日, 中, 英, 仏, 西の勉強</p>
+        <div class="st" id="workOn_titl">Working on</div>
+        <p id="workOn_0001">人工言語「@ski」の開発</p>
+        <p id="workOn_0002">日, 中, 英, 仏, 西の勉強</p>
       </section>
       <section class="sbb i" id="works">
-        <div class="st">Works</div>
-        <p>JSの練習のために外部ライブラリを使わずに作った作品集です。</p>
+        <div class="st" id="work_titl">Works</div>
+        <p id="work_0001">JSの練習のために外部ライブラリを使わずに作った作品集です。</p>
         <div class="work">
-          <div class="st2">Formula evaluation</div>
+          <div class="st2" id="work_form">Formula evaluation</div>
           <input class="formula" placeholder="Example: (sin(pi()/6)^2+cos(pi()/3))-gcd(6,4)%3" id="formula">
           <p>=<span id="answer"></span></p>
         </div>
         <div class="work">
-          <div class="st2">Flashcards</div>
+          <div class="st2" id="work_flas">Flashcards</div>
           <input type="file" accept=".csv" style="display: none;" id="uploadCsv">
           <div class="button" id="fakeButton">Upload .csv</div>
-          <a href="files/sample.csv" download><div class="button">Download sample.csv</div></a>
+          <a href="files/sample.csv" download><div class="button" id="work_down">Download sample.csv</div></a>
           <div class="flashcardsWrap">
             <div class="selectWrap">
               <div class="selectInner selected" id="memorize"><span>Memorize</span></div>
               <div class="selectInner" id="test"><span>Test</span></div>
             </div>
             <div class="flashcardsScreen" id="screen">
-              <div>CSVがアップロードされていません。</div>
+              <div></div>
             </div>
           </div>
         </div>
         <div class="work">
-          <div class="st2">Find the Value of Pi</div>
+          <div class="st2" id="work_find">Find the Value of Pi</div>
           <div>
             <div class="button" id="startMonteCarlo">Start</div>
             <div class="button" id="stopMonteCarlo">Stop</div>
@@ -109,18 +120,23 @@
         </div>
       </section>
       <section class="sbb i" id="links">
-        <div class="st">Links</div>
-        <div class="st2">My links</div>
+        <div class="st" id="link_titl">Links</div>
+        <div class="st2" id="link_myli">My links</div>
         <div>
-          <p><c-l>X(旧Twitter)</c-l><c-r><a href="https://x.com/dragon_scratch_">ゆー(@dragon_scratch_)<i-e /></a></c-r></p>
+          <p><c-l>X</c-l><c-r><a href="https://x.com/dragon_scratch_">ゆー(@dragon_scratch_)<i-e /></a></c-r></p>
           <p><c-l>GitHub</c-l><c-r><a href="https://github.com/dragon-sub">Jüw(dragon-sub)<i-e /></a></c-r></p>
           <p><c-l>Scratch</c-l><c-r><a href="https://scratch.mid.edu/users/dragon_sub">dragon_sub<i-e /></a></c-r></p>
           <p><c-l>Meax</c-l><c-r><a href="https://meax.jp/profile/269">ゆー(@269)<i-e /></a></c-r></p>
           <p><c-l>Atten</c-l><c-r><a href="https://atten.win/users/dragon_sub">@dragon_sub<i-e /></a></c-r></p>
         </div>
-        <div class="st2">Reciprocal links</div>
+        <div class="st2" id="link_reci">Reciprocal links</div>
+        <div class="st3" id="link_myba">My banner (51.3KB)</div>
+        <a href="https://drsb.f5.si"><img src="img/banner.png" alt="ゆーのホームページ" width="140"></a>
+        <pre>
+&lt;a href=&quot;https://drsb.f5.si&quot;&gt;&lt;img src=&quot;https://drsb.f5.si/img/banner.png&quot; alt=&quot;ゆーのホームページ&quot; width=&quot;140&quot;&gt;&lt;/a&gt;</pre>
+        <div class="st3" id="link_link">Links</div>
         <div id="reciprocalLinks"></div>
-        <p>絶賛募集中です。<a href="https://x.com/dragon_scratch_">ここ</a>からどうぞ。</p>
+        <p><span id="link_welc">絶賛募集中です。</span><a href="#contact" id="link_here">ここ</a><span id="link_dozo">からどうぞ。</span></p>
       </section>
       <section class="sbb a i" id="history">
         <div class="st">History</div>
