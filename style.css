@@ -121,7 +121,7 @@ a {
   color: currentColor;
   transition:
     color 0.3s ease,
-    transform 0.5s ease;
+    transform 0.3s ease;
 }
 
 a:hover {
@@ -506,9 +506,9 @@ c-r {
 
 i-e {
   display: inline-block;
-  height: 1rem;
-  width: 1rem;
-  background-size: 1rem;
+  height: 1em;
+  width: 1em;
+  background-size: 1em;
   vertical-align: middle;
   background-image: url(img/externalLink.svg);
 }
@@ -666,4 +666,46 @@ pre {
 
 .french {
   --language: 80px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+}
+
+.gridInner {
+  min-width: 0;
+  padding: 15px;
+  background-color: var(--work);
+  border-radius: 15px;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.gridInner a, .linkBanner {
+  width: 100%;
+}
+
+.gridInner a {
+  display: flex;
+  flex-direction: column;
+}
+
+.gridInner a span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.noTransition * {
+  transition: none !important;
+}
+
+.linkFavicon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-right: 10px;
+  border: 2px solid var(--nav);
+  transition: border 0.3s ease;
 }

@@ -1,4 +1,4 @@
-const lastUpdated = '2026/03/28';
+const lastUpdated = '2026/03/30';
 const page = document.querySelector('html');
 const bar = document.getElementById('progressInner');
 const clock = document.getElementById('clock');
@@ -12,12 +12,18 @@ const loading = document.querySelector('.loading');
 const realTheme = document.getElementById('theme');
 const fakeTheme = document.querySelector('.theme');
 const endpoint = 'https://script.google.com/macros/s/AKfycbzCpdCKFv_kz4XUXTESFb46pJSjHHD4eRmd77ZCyub4OpitIVYp6UAay0vFls53d9jB/exec';
-fakeTheme.onclick = () => realTheme.click();
+fakeTheme.onclick = () => {
+  realTheme.click();
+  saveTheme("colorTheme", realTheme.checked);
+}
 
 function prepareContents() {
   const banner = document.querySelector('.banner');
   const headerWrapper = document.getElementById('headerWrapper');
   const items = document.querySelectorAll('.nav li')
+
+  loadTheme();
+  page.classList.remove('noTransition');
 
   banner.style.opacity = 1;
   banner.style.transform = 'none';
@@ -50,93 +56,102 @@ function reciprocalLinks() {
   const container = document.getElementById('reciprocalLinks');
   const linksData = [
     {
-      name: 'やなぎさん',
       link: 'https://yana-lp.f5.si/',
       title: 'やなぎのホームページ',
-      info: 'コントラストがあって見やすい'
+      info: 'コントラストがあって見やすい',
+      favicon: 'https://yanagi-lpc.github.io/icons/favicon.ico'
     },
     {
-      name: '風止渚さん',
       link: 'https://kzng.f5.si/',
       title: '風止渚のホームページ',
       info: '私の尊敬してる方。',
-      banner: 'https://kzng.f5.si/Banner.png'
+      banner: 'https://kzng.f5.si/Banner.png',
+      favicon: 'https://kzng.f5.si/favicon.ico'
     },
     {
-      name: 'zepto_0321氏',
       link: 'https://zepto-0321.github.io/zepto_page/',
       title: 'zepto_page',
-      info: '私のリア友。いろんなこと知ってる'
+      info: '私のリア友。いろんなこと知ってる',
+      favicon: 'https://zepto-0321.github.io/zepto_page/icon3.jpg'
     },
     {
-      name: 'うまいだんごさん',
       link: 'https://umaii.f5.si/',
       title: 'うまいだんご',
       info: 'アプリとか作ってるすごい人。ページの一番最初から伝わるC#信者感',
-      banner: 'https://umaii.f5.si/img/banner.png'
+      banner: 'https://umaii.f5.si/img/banner.png',
+      favicon: 'https://umaii.f5.si/img/favicon.png'
     },
     {
-      name: 'n0xaさん',
       link: 'https://n0xa.f5.si/',
       title: '自己紹介',
-      info: 'モダンでかっこいいサイト。淡い背景がいい'
+      info: 'モダンでかっこいいサイト。淡い背景とアニメーションが格好いい',
+      favicon: 'https://n0xa.f5.si/favicon.ico'
     },
     {
-      name: 'ActiveTKさん',
       link: 'https://profile.activetk.jp/',
       title: 'ActiveTK. - ActiveTK.jp',
-      info: 'とにかくすごい方。私の憧れ。'
+      info: 'とにかくすごい方。私の憧れ。色々なツールを公開されております',
+      favicon: 'https://profile.activetk.jp/favicon.ico'
     },
     {
-      name: '256serverさん',
       link: 'https://256server.com/',
       title: '256server｜home',
       info: 'アクセス数と相互リンクの数が多くて羨ましい',
-      banner: 'https://256server.com/image/banner/256server.png'
+      banner: 'https://256server.com/image/banner/256server.png',
+      favicon: 'https://256server.com/favicon.ico'
     },
     {
-      name: '彩音さん',
       link: 'https://www.ayane0857.net/',
       title: 'メインページ | 彩音のサイト',
-      info: '誇張しすぎない桃色とか洗練されたUIがおしゃれ'
+      info: '誇張しすぎない桃色とか洗練されたUIがおしゃれ',
+      favicon: 'https://ayane0857.net/favicon.ico'
     },
     {
-      name: 'ただのサメさん',
       link: 'https://tadanosame.com/',
       title: 'ただのサメ | 公式サイト',
-      info: 'ターコイズっぽい配色と余白が綺麗で好き。'
+      info: 'ターコイズっぽい配色と余白が綺麗で好き。',
+      favicon: 'https://www.google.com/s2/favicons?sz=64&domain=http://tadanosame.com'
     },
     {
-      name: 'ココリーネさん',
       link: 'https://koko2rine.com/',
       title: 'ココリーネの趣味部屋 - PCと野獣と。',
-      info: 'ページが豪華で見飽きないこんな感じのサイトを作りたかった'
+      info: 'ページが豪華で見飽きないこんな感じのサイトを作りたかった',
+      favicon: 'https://koko2rine.com/favicon.ico'
     },
     {
-      name: 'ちくにざきさん',
       link: 'https://157.f5.si/',
       title: 'ちくにざき',
-      info: '自宅鯖でやってるらしい。'
+      info: '自宅鯖でやってるらしい。自分もそういう系の知識を身に着けてみたい',
+      favicon: "https://www.google.com/s2/favicons?sz=64&domain=157.f5.si",
+      banner: 'https://157.f5.si/images/banners/banner-2.png'
     },
     {
-      name: 'ko-mathさん',
       link: 'https://ko-math.f5.si/',
       title: 'ko-math homepage',
-      info: 'アテ友のサイトです。BFの実行環境とか作っててすごい'
+      info: 'アテ友のサイトです。BFの実行環境とか作っててすごく充実してるページです',
+      favicon: 'https://ko-math.f5.si/favicon.ico'
     },
     {
-      name: 'lpv_vqlさん',
       link: 'https://lpv-vql.github.io/',
       title: 'lpv_vql',
-      info: '私の尊敬してる方です。Scratchもすごいので是非ご覧なさっては。'
+      info: '私の尊敬してる方です。Scratchもすごいので是非ご覧なさっては。',
+      favicon: 'https://lpv-vql.github.io/favicon.ico'
     }
   ];
   let links = "";
   linksData.forEach(site => {
     links += `
-  <p><c-l>${site.name}</c-l><c-r><a href="${site.link}">${site.title}</a></c-r></p>
-  ${site.banner ? `<a href="${site.link}"><img src="${site.banner}" width="140"></a>` : ``}
-  <small>${site.info}</small>`;
+<div class="gridInner">
+  <a href="${site.link}">
+    <div style="display: flex; width: 100%">
+      <img src="${site.favicon}" class="linkFavicon">
+      <div style="flex: 1;">${site.banner ? `<img src="${site.banner}" class="linkBanner">` : ""}</div>
+    </div>
+    <span>${site.title}<i-e /></span>
+  </a>
+  <small>${site.info}</small>
+</div>
+`;
   });
   container.innerHTML = links;
 }
@@ -178,7 +193,8 @@ function history() {
         {date: '19', info: 'Recommended Songを追加'},
         {date: '20', info: 'ヒーローバナーをpngからwebpに変更'},
         {date: '26', info: '相互リンク用バナーを作成'},
-        {date: '28', info: '一部多言語対応化'}
+        {date: '28', info: '一部多言語対応化'},
+        {date: '30', info: 'テーマ・言語を保存するように'}
       ]
     }
   ];
@@ -252,6 +268,17 @@ function setMaxHeight() {
       part.style.maxHeight = part.scrollHeight + 'px';
     }
   });
+}
+
+function saveTheme(key, data) {
+  localStorage.setItem(key, data);
+}
+
+function loadTheme() {
+  const theme = localStorage.getItem("colorTheme");
+  const lang = localStorage.getItem("language");
+  if (theme === "true") realTheme.click();
+  updateLanguage(+lang);
 }
 
 document.getElementById("form")

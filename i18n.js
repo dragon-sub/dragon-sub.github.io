@@ -3,7 +3,7 @@ const english = document.getElementById('english');
 const french = document.getElementById('french');
 const toggle = document.getElementById('languageSwitch');
 
-japanese.onclick = () => {toggle.className = "languageSwitch japanese"; updateLanguage(0)};
+japanese.onclick = () => {updateLanguage(0)};
 english.onclick = () => {toggle.className = "languageSwitch english"; updateLanguage(1)};
 french.onclick = () => {toggle.className = "languageSwitch french"; updateLanguage(2)};
 
@@ -82,18 +82,18 @@ const translatedText = {
   link_myba: ['My banner (51.3KB)', 'My banner (51.3KB)', 'Ma bannière (51.3 Ko)'],
   link_welc: [
     '絶賛募集中です。',
-    'Now actively seeking.',
-    'Actuellement en recherche active.'
+    'Now actively seeking. Click ',
+    'Actuellement en recherche active. Cliquez '
   ],
   link_here: [
     'ここ',
-    'Here',
-    'Ici'
+    'here',
+    'ici'
   ],
   link_dozo: [
     'からどうぞ。',
-    'Click here.',
-    'Cliquez ici.'
+    '.',
+    '.'
   ],
   link_link: ['Links', 'Links', 'Liens']
 };
@@ -107,9 +107,11 @@ function getText() {
 }
 
 function updateLanguage(lang) {
+  saveTheme('language', lang);
   textElements.forEach((element, i) => {
     element.innerText = translatedText[textKeys[i]][lang];
   });
+  toggle.className = "languageSwitch " + ["japanese", "english", "french"][lang];
 }
 
 getText();
