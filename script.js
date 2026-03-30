@@ -50,6 +50,9 @@ function prepareContents() {
     });
   });
   document.getElementById('lastUpdated').innerText = lastUpdated;
+
+  getText();
+  loadLanguage();
 }
 
 function reciprocalLinks() {
@@ -139,17 +142,19 @@ function reciprocalLinks() {
     }
   ];
   let links = "";
-  linksData.forEach(site => {
+  linksData.forEach((site, i) => {
+    const idy = 'link_' + String(i + 1).padStart(4, '0');
+    const bannerImage = `<img src="${site.banner}" class="linkBanner">`;
     links += `
 <div class="gridInner">
   <a href="${site.link}">
     <div style="display: flex; width: 100%">
       <img src="${site.favicon}" class="linkFavicon">
-      <div style="flex: 1;">${site.banner ? `<img src="${site.banner}" class="linkBanner">` : ""}</div>
+      <div style="flex: 1;">${site.banner ? bannerImage : ""}</div>
     </div>
     <span>${site.title}<i-e /></span>
   </a>
-  <small>${site.info}</small>
+  <small id="${idy}">${site.info}</small>
 </div>
 `;
   });
@@ -200,11 +205,13 @@ function history() {
   ];
   let histories = '';
   let eventMonth = '';
+  let i = 1;
   historiesData.forEach(thing =>{
     eventMonth = thing.month;
     histories += `<div class="st2">${eventMonth}</div>`;
     thing.things.forEach(event => {
-      histories += `<p><c-l>${eventMonth + '.' + event.date}</c-l><c-r>${event.info}</c-r></p>`
+      const idy = String(i++).padStart(4, '0');
+      histories += `<p><c-l>${eventMonth + '.' + event.date}</c-l><c-r id="hist_${idy}">${event.info}</c-r></p>`;
     });
   });
   pageHistories.innerHTML = histories;
@@ -276,8 +283,11 @@ function saveTheme(key, data) {
 
 function loadTheme() {
   const theme = localStorage.getItem("colorTheme");
-  const lang = localStorage.getItem("language");
   if (theme === "true") realTheme.click();
+}
+
+function loadLanguage() {
+  const lang = localStorage.getItem("language");
   updateLanguage(+lang);
 }
 

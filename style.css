@@ -318,7 +318,7 @@ p {
   color: currentColor;
 }
 
-small {
+#contact small {
   margin-bottom: 10px;
   display: block;
 }
@@ -695,6 +695,7 @@ pre {
 .gridInner a span {
   display: inline-block;
   vertical-align: middle;
+  margin: 5px 0;
 }
 
 .noTransition * {

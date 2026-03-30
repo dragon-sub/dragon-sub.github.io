@@ -144,24 +144,24 @@
       </section>
       <section class="sbb i" id="contact">
         <div class="st">Contact</div>
-        <small>
-          Apps ScriptとGoogle Spreadsheetを用いたフォームです。<br>
-          未読メッセージが100件を超えている場合、データの受け取りは拒否されます。<br>
+        <small id="cont_desc">
+          Apps ScriptとGoogle Spreadsheetを用いたフォームです。
+          未読メッセージが100件を超えている場合、データの受け取りは拒否されます。
           バグ報告や相互リンク申請など気軽にどうぞ。
         </small>
         <div>
           <form id="form">
             <div class="formInput">
               <input name="name" placeholder=" " required>
-              <label>Name</label>
+              <label id="cont_name">Name</label>
             </div>
             <div class="formInput">
               <input name="email" placeholder=" " required>
-              <label>Mail Address</label>
+              <label id="cont_mail">Mail Address</label>
             </div>
             <div class="formInput">
               <input name="message" placeholder=" " required>
-              <label>Message</label>
+              <label id="cont_mess">Message</label>
             </div>
             <button type="submit" style="display: none;" id="realSubmit">Submit</button>
             <div class="button" id="fakeSubmit" style="margin-top: 20px;">Submit</div>
@@ -172,10 +172,15 @@
     </main>
     <footer>
       <div class="text">
-        <p>Images: Photo by zyutazyudasu (CC BY-SA 2.0)</p>
-        <p>Fonts: Inter, Noto Sans JP</p>
-        <p>Icons: <a href="https://icons8.com/icon/83168/external-link">External link</a> icon by <a href="https://icons8.com/">icons8<i-e /></a></p>
-        <p>Last updated: <span id="lastUpdated"></span></p>
+        <p id="foot_0001">Images: Photo by zyutazyudasu (CC BY-SA 2.0)</p>
+        <p id="foot_0002">Fonts: Inter, Noto Sans JP</p>
+        <p>
+          <span id="foot_0003">Icons: </span>
+          <a id="foot_0004" href="https://icons8.com/icon/83168/external-link">External link</a>
+          <span id="foot_0005"> icon by </span>
+          <a href="https://icons8.com/">icons8<i-e /></a>
+        </p>
+        <p><span id="foot_0006">Last updated: </span><span id="lastUpdated"></span></p>
       </div>
       <div class="footerLogo">
         <a href="https://scratch.mit.edu/users/dragon_sub"><img src="img/logo/scratch.svg"></a>

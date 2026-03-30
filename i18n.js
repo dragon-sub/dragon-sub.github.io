@@ -4,8 +4,8 @@ const french = document.getElementById('french');
 const toggle = document.getElementById('languageSwitch');
 
 japanese.onclick = () => {updateLanguage(0)};
-english.onclick = () => {toggle.className = "languageSwitch english"; updateLanguage(1)};
-french.onclick = () => {toggle.className = "languageSwitch french"; updateLanguage(2)};
+english.onclick = () => {updateLanguage(1)};
+french.onclick = () => {updateLanguage(2)};
 
 const translatedText = {
   meta_titl: ["Jüw's Page", "Jüw's Page", 'Page de Jüw'],
@@ -95,7 +95,204 @@ const translatedText = {
     '.',
     '.'
   ],
-  link_link: ['Links', 'Links', 'Liens']
+  link_link: ['Links', 'Links', 'Liens'],
+
+  link_0001: [
+    'コントラストがあって見やすい',
+    'High contrast for better visibility',
+    'Contraste élevé pour une meilleure lisibilité'
+  ],
+  link_0002: [
+    '私の尊敬してる方。',
+    'People I respect.',
+    'Personnes que je respecte.'
+  ],
+  link_0003: [
+    '私のリア友。いろんなこと知ってる',
+    'My real-life friend. Knows a lot about everything.',
+    'Mon ami dans la vraie vie. Sait énormément de choses.'
+  ],
+  link_0004: [
+    'アプリとか作ってるすごい人。ページの一番最初から伝わるC#信者感',
+    'A talented developer who creates apps. You can feel their C# devotion from the very top of the page.',
+    'Un développeur talentueux qui crée des applis. On ressent sa dévotion pour le C# dès le début de sa page.'
+  ],
+  link_0005: [
+    'モダンでかっこいいサイト。淡い背景とアニメーションが格好いい',
+    'A cool, modern site. Love the subtle background and sleek animations.',
+    'Un site moderne et stylé. Le fond pastel et les animations sont superbes.'
+  ],
+  link_0006: [
+    'とにかくすごい方。私の憧れ。色々なツールを公開されております',
+    'An amazing person I truly admire. They have released various tools.',
+    'Une personne incroyable que j’admire énormément. Il a publié divers outils.'
+  ],
+  link_0007: [
+    'アクセス数と相互リンクの数が多くて羨ましい',
+    'I envy their high traffic and numerous reciprocal links.',
+    'J’envie leur nombre de visites et de liens réciproques.'
+  ],
+  link_0008: [
+    '誇張しすぎない桃色とか洗練されたUIがおしゃれ',
+    'Chic, sophisticated UI with subtle, tasteful pink accents.',
+    'Une UI raffinée et élégante avec des touches de rose subtiles.'
+  ],
+  link_0009: [
+    'ターコイズっぽい配色と余白が綺麗で好き。',
+    'I love the turquoise palette and the beautiful use of whitespace.',
+    'J’adore la palette turquoise et la belle utilisation de l’espace blanc.'
+  ],
+  link_0010: [
+    'ページが豪華で見飽きないこんな感じのサイトを作りたかった',
+    'A stunning page I never tire of. This is the kind of site I’ve always wanted to create.',
+    'Une page magnifique dont on ne se lasse pas. C’est le genre de site que j’ai toujours voulu créer.'
+  ],
+  link_0011: [
+    '自宅鯖でやってるらしい。自分もそういう系の知識を身に着けてみたい',
+    'Running on a home server. I’d love to learn more about that kind of tech myself.',
+    'Il paraît que c’est sur un serveur domestique. J’aimerais bien acquérir ce genre de connaissances.'
+  ],
+  link_0012: [
+    'アテ友のサイトです。BFの実行環境とか作っててすごく充実してるページです',
+    'A site by an "Atte-tomo" (Atten friend). They even built a Brainfuck runtime—it’s a very impressive page.',
+    'Le site d’un « Atte-tomo » (ami d’Atten). Il a créé un environnement d’exécution pour Brainfuck, c’est une page très complète.'
+  ],
+  link_0013: [
+    '私の尊敬してる方です。Scratchもすごいので是非ご覧なさっては。',
+    'Someone I truly admire. Their Scratch projects are amazing, so please check them out.',
+    'Quelqu’un que j’admire vraiment. Ses projets Scratch sont incroyables, n’hésitez pas à y jeter un œil.'
+  ],
+
+  hist_0001: [
+    'HPをリニューアル',
+    'Website renewed',
+    'Site web renouvelé'
+  ],
+  hist_0002: [
+    'Formula evaluationを公開',
+    'Released "Formula evaluation"',
+    'Publication de « Formula evaluation »'
+  ],
+  hist_0003: [
+    'Flashcardsを公開',
+    'Released "Flashcards"',
+    'Publication de « Flashcards »'
+  ],
+  hist_0004: [
+    'アイコン等追加',
+    'Added icons and more',
+    'Ajout d’icônes et plus'
+  ],
+  hist_0005: [
+    'プログレスバー・時計追加',
+    'Added progress bar and clock',
+    'Ajout d’une barre de progression et d’une horloge'
+  ],
+  hist_0006: [
+    '計算機を強化',
+    'Enhanced the calculator',
+    'Amélioration de la calculatrice'
+  ],
+  hist_0007: [
+    '長い要素の折り畳み実装',
+    'Implemented folding for long elements',
+    'Mise en œuvre du repliage pour les éléments longs'
+  ],
+  hist_0008: [
+    'Find the Value of Piを公開',
+    'Released "Find the Value of Pi"',
+    'Publication de « Find the Value of Pi »'
+  ],
+  hist_0009: [
+    '要素アニメのグループ化',
+    'Grouped element animations',
+    'Groupement des animations d’éléments'
+  ],
+  hist_0010: [
+    'フォームの作成',
+    'Created a form',
+    'Création d’un formulaire'
+  ],
+  hist_0011: [
+    'テーマ変更を実装',
+    'Implemented theme switching',
+    'Mise en œuvre du changement de thème'
+  ],
+  hist_0012: [
+    'gridを葬り軽量化',
+    'Discarded background grids for optimization',
+    'Suppression de la grille de fond pour l’optimisation'
+  ],
+  hist_0013: [
+    'フォントをOutfit→Interに',
+    'Changed font from Outfit to Inter',
+    'Passage de la police Outfit à Inter'
+  ],
+  hist_0014: [
+    'Recommended Songを追加',
+    'Added Recommended Song',
+    'Ajout de la section « Chanson recommandée »'
+  ],
+  hist_0015: [
+    'ヒーローバナーをpngからwebpに変更',
+    'Changed hero banner from PNG to WebP',
+    'Passage de la bannière héro du format PNG au WebP'
+  ],
+  hist_0016: [
+    '相互リンク用バナーを作成',
+    'Created a banner for mutual links',
+    'Création d’une bannière pour les liens mutuels'
+  ],
+  hist_0017: [
+    '一部多言語対応化',
+    'Partial multilingual support',
+    'Support multilingue partiel'
+  ],
+  hist_0018: [
+    'テーマ・言語を保存するように',
+    'Saving theme and language settings',
+    'Enregistrement du thème et de la langue'
+  ],
+
+  cont_desc: [
+    'Apps ScriptとGoogle Spreadsheetを用いたフォームです。未読メッセージが100件を超えている場合、データの受け取りは拒否されます。バグ報告や相互リンク申請など気軽にどうぞ。',
+    'This form uses Apps Script and Google Sheets. Submissions will be rejected if there are over 100 unread messages. Feel free to send bug reports, mutual link requests, or any other messages.',
+    'Ce formulaire utilise Apps Script et Google Sheets. Les envois seront refusés s’il y a plus de 100 messages non lus. N’hésitez pas à envoyer des rapports de bugs, des demandes de liens mutuels ou d’autres messages.'
+  ],
+  cont_name: ['Name', 'Name', 'Nom'],
+  cont_mail: ['Email Address', 'Email Address', 'Adresse e-mail'],
+  fakeSubmit: ['Submit', 'Submit', 'Envoyer'],
+
+  foot_0001: [
+    'Images: Photo by zyutazyudasu (CC BY-SA 2.0)',
+    'Images: Photo by zyutazyudasu (CC BY-SA 2.0)',
+    'Images : Photo par zyutazyudasu (CC BY-SA 2.0)'
+  ],
+  foot_0002: [
+    'Fonts: Inter, Noto Sans JP',
+    'Fonts: Inter, Noto Sans JP',
+    'Polices : Inter, Noto Sans JP'
+  ],
+  foot_0003: [
+    'Icons: ',
+    'Icons: ',
+    'Icônes : '
+  ],
+  foot_0004: [
+    'External link',
+    'External link',
+    'Lien externe'
+  ],
+  foot_0005: [
+    ' icon by ',
+    ' icon by ',
+    ' icône par '
+  ],
+  foot_0006: [
+    'Last updated: ',
+    'Last updated: ',
+    'Dernière mise à jour : '
+  ]
 };
 let textElements = [];
 const textKeys = Object.keys(translatedText);
@@ -107,11 +304,9 @@ function getText() {
 }
 
 function updateLanguage(lang) {
+  toggle.className = "languageSwitch " + ["japanese", "english", "french"][lang];
   saveTheme('language', lang);
   textElements.forEach((element, i) => {
     element.innerText = translatedText[textKeys[i]][lang];
   });
-  toggle.className = "languageSwitch " + ["japanese", "english", "french"][lang];
 }
-
-getText();
