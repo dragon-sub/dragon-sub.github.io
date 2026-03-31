@@ -162,6 +162,11 @@ const translatedText = {
     'Someone I truly admire. Their Scratch projects are amazing, so please check them out.',
     'Quelqu’un que j’admire vraiment. Ses projets Scratch sont incroyables, n’hésitez pas à y jeter un œil.'
   ],
+  link_0014: [
+    '音楽制作をされているそうです。私はいつも聞くだけなので見習いたいです',
+    "I hear he's involved in music production. I'm always just a listener, so I'd like to learn from him.",
+    "J'ai entendu dire qu'il travaillait dans la production musicale. Je me contente généralement d'écouter, alors j'aimerais bien apprendre de lui."
+  ],
 
   hist_0001: [
     'HPをリニューアル',

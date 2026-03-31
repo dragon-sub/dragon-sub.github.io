@@ -139,6 +139,13 @@ function reciprocalLinks() {
       title: 'lpv_vql',
       info: '私の尊敬してる方です。Scratchもすごいので是非ご覧なさっては。',
       favicon: 'https://lpv-vql.github.io/favicon.ico'
+    },
+    {
+      link: "https://matsunoki.f5.si/",
+      title: '松下マツノキ / Matsunoki',
+      info: '音楽制作をされているそうです。私はいつも聞くだけなので見習いたいです',
+      favicon: 'https://raw.githubusercontent.com/Matsunokiura/matsunokiura.github.io/refs/heads/main/Matsunoki.png',
+      banner: 'https://raw.githubusercontent.com/Matsunokiura/matsunokiura.github.io/refs/heads/main/%E6%9D%BE%E4%B8%8B%E3%83%9E%E3%83%84%E3%83%8E%E3%82%AD.png'
     }
   ];
   let links = "";
