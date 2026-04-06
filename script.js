@@ -9,12 +9,13 @@ const realSubmit = document.getElementById('realSubmit');
 const fakeSubmit = document.getElementById('fakeSubmit');
 fakeSubmit.onclick = () => realSubmit.click();
 const loading = document.querySelector('.loading');
-const realTheme = document.getElementById('theme');
 const fakeTheme = document.querySelector('.theme');
 const endpoint = 'https://script.google.com/macros/s/AKfycbzCpdCKFv_kz4XUXTESFb46pJSjHHD4eRmd77ZCyub4OpitIVYp6UAay0vFls53d9jB/exec';
 fakeTheme.onclick = () => {
-  realTheme.click();
-  saveTheme("colorTheme", realTheme.checked);
+  page.classList.toggle('dark');
+  saveTheme("colorTheme", 
+    page.classList.contains('dark') ? 'dark' : ''
+  );
 }
 
 function prepareContents() {
@@ -22,18 +23,6 @@ function prepareContents() {
   const headerWrapper = document.getElementById('headerWrapper');
   const items = document.querySelectorAll('.nav li')
 
-  loadTheme();
-  page.classList.remove('noTransition');
-
-  banner.style.opacity = 1;
-  banner.style.transform = 'none';
-  headerWrapper.style.backgroundColor = 'rgba(255, 255, 255, 0)';
-
-  items.forEach((li, i) => {
-    li.style.transitionDelay = `${i * 0.1 + 0.5}s`;
-    li.style.opacity = 1;
-    li.style.transform = 'none';
-  });
   reciprocalLinks();
   history();
   updateProgress();
@@ -53,6 +42,16 @@ function prepareContents() {
 
   getText();
   loadLanguage();
+
+  banner.style.opacity = 1;
+  banner.style.transform = 'none';
+  headerWrapper.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+
+  items.forEach((li, i) => {
+    li.style.transitionDelay = `${i * 0.1 + 0.5}s`;
+    li.style.opacity = 1;
+    li.style.transform = 'none';
+  });
 }
 
 function reciprocalLinks() {
@@ -290,7 +289,8 @@ function saveTheme(key, data) {
 
 function loadTheme() {
   const theme = localStorage.getItem("colorTheme");
-  if (theme === "true") realTheme.click();
+  page.classList.remove('dark');
+  if (theme) page.classList.add(theme);
 }
 
 function loadLanguage() {
@@ -316,5 +316,10 @@ document.getElementById("form")
 });
 
 window.addEventListener('load', prepareContents);
+window.addEventListener('pageshow', () => {
+  page.classList.add('noTransition');
+  loadTheme();
+  page.classList.remove('noTransition');
+});
 
 window.setInterval(updateClock, 1000);

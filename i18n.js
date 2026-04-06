@@ -314,4 +314,5 @@ function updateLanguage(lang) {
   textElements.forEach((element, i) => {
     element.innerText = translatedText[textKeys[i]][lang];
   });
+  setMaxHeight();
 }

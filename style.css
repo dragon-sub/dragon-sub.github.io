@@ -24,14 +24,14 @@ html body {
   --show-more: #fff;
   --button: #fff;
   --nav-text: #000;
-  --nav: #fff;
+  --nav: rgba(255, 255, 255, 0.7);
   --select: #f2f6f9;
   --theme-image: url(img/light.svg);
   --selection: #dbedff;
   --button-hover: #f6f6f6;
 }
 
-:root:has(#theme:checked) {
+:root.dark {
   --background-color: #121212;
   --background-image: url(img/bannerDark.webp);
   --section-color: #1e1e1e;
@@ -43,7 +43,7 @@ html body {
   --show-more: #666;
   --button: #3a3a3a;
   --nav-text: #fff;
-  --nav: #1a1a1a;
+  --nav: rgba(26, 26, 26, 0.7);
   --select: #5d6e7b;
   --theme-image: url(img/dark.svg);
   --selection: #506f8e;
@@ -670,7 +670,7 @@ pre {
 
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
 }
 
@@ -709,4 +709,8 @@ pre {
   margin-right: 10px;
   border: 2px solid var(--nav);
   transition: border 0.3s ease;
+}
+
+.p {
+  margin: 20px 0;
 }
