@@ -148,6 +148,7 @@ a:hover {
 
 .nav {
   position: sticky;
+  width: 100%;
   top: 0;
   background-color: var(--nav);
   font-size: 20px;
@@ -227,6 +228,12 @@ section {
 section:hover {
   box-shadow: 0 0 10px rgba(163, 201, 255, 0.3);
   border: 1px solid #a3c9ff;
+}
+
+@media (max-width: 500px) {
+  section {
+    padding: 30px 15px;
+  }
 }
 
 section.i {
@@ -453,17 +460,16 @@ a:hover .icon {
 
 c-l {
   display: inline-block;
-  width: calc(50% - 0.5rem - 1px);
+  width: calc(50% - 0.5rem);
   text-align: right;
   padding-right: 0.5rem;
-  border-right: 1px solid #aaa;
   height: 100%;
   vertical-align: middle;
 }
 
 c-r {
   display: inline-block;
-  width: calc(50% - 0.5rem);
+  width: calc(50% - 0.5rem - 1px);
   text-align: left;
   padding-left: 0.5rem;
   white-space: nowrap;
@@ -473,6 +479,7 @@ c-r {
   -webkit-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   vertical-align: middle;
+  border-left: 1px solid #aaa;
 }
 
 .a c-r {
