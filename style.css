@@ -148,7 +148,6 @@ a:hover {
 
 .nav {
   position: sticky;
-  width: 100%;
   top: 0;
   background-color: var(--nav);
   font-size: 20px;
