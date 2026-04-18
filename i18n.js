@@ -297,6 +297,11 @@ const translatedText = {
     'Last updated: ',
     'Last updated: ',
     'Dernière mise à jour : '
+  ],
+  foot_ga4: [
+    'このサイトはページの改善のためGoogle Analytics 4を用いてユーザーのイベントを解析しています。',
+    "This site uses Google Analytics 4 to analyze user events in order to improve its pages.",
+    "Ce site utilise Google Analytics 4 pour analyser les événements des utilisateurs afin d'améliorer ses pages."
   ]
 };
 let textElements = [];

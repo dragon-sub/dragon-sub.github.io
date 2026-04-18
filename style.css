@@ -229,12 +229,6 @@ section:hover {
   border: 1px solid #a3c9ff;
 }
 
-@media (max-width: 500px) {
-  section {
-    padding: 30px 15px;
-  }
-}
-
 section.i {
   transition:
     opacity 1s ease,
@@ -339,6 +333,16 @@ p {
   margin: 15px;
   border-radius: 20px;
   transition: background-color 0.3s ease;
+}
+
+@media (max-width: 500px) {
+  section {
+    padding: 30px 15px;
+  }
+
+  .work {
+    margin: 15px 0;
+  }
 }
 
 .formula {
