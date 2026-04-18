@@ -124,7 +124,7 @@ function reciprocalLinks() {
       link: 'https://157.f5.si/',
       title: 'ちくにざき',
       info: '自宅鯖でやってるらしい。自分もそういう系の知識を身に着けてみたい',
-      favicon: "https://www.google.com/s2/favicons?sz=64&domain=157.f5.si",
+      favicon: "img/load.svg",
       banner: 'https://157.f5.si/images/banners/banner-2.png'
     },
     {
@@ -145,6 +145,12 @@ function reciprocalLinks() {
       info: '音楽制作をされているそうです。私はいつも聞くだけなので見習いたいです',
       favicon: 'https://raw.githubusercontent.com/Matsunokiura/matsunokiura.github.io/refs/heads/main/Matsunoki.png',
       banner: 'https://raw.githubusercontent.com/Matsunokiura/matsunokiura.github.io/refs/heads/main/%E6%9D%BE%E4%B8%8B%E3%83%9E%E3%83%84%E3%83%8E%E3%82%AD.png'
+    },
+    {
+      link: "https://podzol-catenary.github.io/music-website./index.html",
+      title: "podzol-catenary",
+      info: "素朴で風情ある街並みの写真が印象的で音楽活動も展開されています。",
+      favicon: "img/load.svg"
     }
   ];
   let links = "";

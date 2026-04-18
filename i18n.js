@@ -167,6 +167,11 @@ const translatedText = {
     "I hear he's involved in music production. I'm always just a listener, so I'd like to learn from him.",
     "J'ai entendu dire qu'il travaillait dans la production musicale. Je me contente généralement d'écouter, alors j'aimerais bien apprendre de lui."
   ],
+  link_0015: [
+    "素朴で風情ある街並みの写真が印象的。音楽活動もされております。",
+    "Evocative photos of simple, atmospheric streetscapes. They are also engaged in musical activities.",
+    "Des photos de rues simples et pleines de charme sont particulièrement marquantes. Cette personne fait également de la musique."
+  ],
 
   hist_0001: [
     'HPをリニューアル',
