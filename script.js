@@ -151,6 +151,25 @@ function reciprocalLinks() {
       title: "podzol-catenary",
       info: "素朴で風情ある街並みの写真が印象的で音楽活動も展開されています。",
       favicon: "img/load.svg"
+    },
+    {
+      link: "https://negapainter.work/",
+      title: "Np's Pages",
+      info: "ピクセルフォントとサイトの雰囲気がマッチしてすごくいい",
+      favicon: "https://emoji-route.deno.dev/svg/%F0%9F%92%BB"
+    },
+    {
+      link: "https://yuito-it.jp/",
+      title: "yuitopia(ユイトピア) - あかつきゆいと 公式ウェブサイト",
+      info: "レイアウトが整然としていて綺麗。英語も対応しているみたい",
+      favicon: "https://www.yuito-it.jp/favicon.ico?favicon.bbe51aaa.ico",
+      banner: "https://yuito-it.jp/img/banner/yuitopia_367x130.gif"
+    },
+    {
+      link: "https://montblank.fun/",
+      title: "まろん｡のポートフォリオ",
+      info: "様々な言語を書かれている私の尊敬する方です。羨望の目を向けてばかりではいけませんが。",
+      favicon: "https://montblank.fun/icon.png"
     }
   ];
   let links = "";
@@ -320,6 +339,10 @@ document.getElementById("form")
     realSubmit.disabled = 'true';
     loading.height = 0;
 });
+
+function togglePopup() {
+  shadow.classList.add('noShadow');
+}
 
 window.addEventListener('load', prepareContents);
 window.addEventListener('pageshow', () => {

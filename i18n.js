@@ -172,6 +172,21 @@ const translatedText = {
     "Evocative photos of simple, atmospheric streetscapes. They are also engaged in musical activities.",
     "Des photos de rues simples et pleines de charme sont particulièrement marquantes. Cette personne fait également de la musique."
   ],
+  link_0016: [
+    "ピクセルフォントとサイトの雰囲気がマッチしてすごくいい",
+    "The pixel font matches the vibe of the site really well and looks great.",
+    "La police pixel correspond très bien à l’ambiance du site et rend vraiment bien."
+  ],
+  link_0017: [
+    "レイアウトが整然としていて綺麗。英語も対応しているみたい",
+    "The layout is clean and well-organized. It also seems to support English.",
+    "La mise en page est propre et bien structurée. Il semble aussi y avoir une version anglaise."
+  ],
+  link_0018: [
+    "様々な言語を書かれている私の尊敬する方です。羨望の目を向けてばかりではいけませんが。",
+    "This is someone I deeply respect who writes in many different languages. Though I know I shouldn’t just look at them with envy.",
+    "C’est une personne que je respecte profondément et qui écrit dans de nombreuses langues. Même si je sais que je ne devrais pas me contenter de l’envier."
+  ],
 
   hist_0001: [
     'HPをリニューアル',
