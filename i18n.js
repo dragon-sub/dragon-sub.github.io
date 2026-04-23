@@ -187,6 +187,51 @@ const translatedText = {
     "This is someone I deeply respect who writes in many different languages. Though I know I shouldn’t just look at them with envy.",
     "C’est une personne que je respecte profondément et qui écrit dans de nombreuses langues. Même si je sais que je ne devrais pas me contenter de l’envier."
   ],
+  link_0019: [
+    "ページを開いた直後の文字のストロークのアニメーションがかっこいい",
+    "The animation of the text strokes right after opening the page is cool.",
+    "L'animation des traits de texte juste après l'ouverture de la page est sympa."
+  ],
+  link_0020: [
+    "カーソルを作るっていう革新的なUIがすごい。ページ遷移の時のフェードも含めて。",
+    "The innovative UI of creating a cursor is amazing, including the fade-in effect during page transitions.",
+    "L'interface utilisateur innovante pour la création d'un curseur est remarquable, notamment l'effet de fondu lors des transitions de page."
+  ],
+  link_0021: [
+    "要素のゆらゆらが可愛い。ページをスクロールするにつれて暗くなる作りこみもまた。",
+    "The way the elements sway is adorable. I also like the way the page darkens as you scroll.",
+    "Le mouvement des éléments est adorable. J'aime aussi la façon dont la page s'assombrit lorsqu'on la fait défiler."
+  ],
+  link_0022: [
+    "見た目がミニマルなのにも関わらず情報はしっかりと入っていて取捨選択がすごく上手",
+    "Despite its minimalist appearance, it contains plenty of information, demonstrating excellent selection and omission.",
+    "Malgré son apparence minimaliste, il contient une mine d'informations, témoignant d'une excellente sélection et d'une parfaite maîtrise des omissions."
+  ],
+  link_0023: [
+    "配色が落ち着いててバナーが可愛い！",
+    "The color scheme is calming and the banner is cute!",
+    "Les couleurs sont apaisantes et la bannière est mignonne !"
+  ],
+  link_0024: [
+    "大会記録とか資格とかいっぱい持ってるすごい人のすごいサイト。",
+    "This is an amazing website run by an incredible person who holds tons of competition records and qualifications.",
+    "Il s'agit d'un site web exceptionnel, géré par une personne incroyable qui détient un nombre impressionnant de records et de qualifications en compétition."
+  ],
+  link_0025: [
+    "見た目も内容も面白い。ブログもあるみたい",
+    "It looks interesting and has interesting content. It seems they also have a blog.",
+    "Ça a l'air intéressant et le contenu est captivant. Il semblerait qu'ils aient aussi un blog."
+  ],
+  link_0026: [
+    "すっきりしていてテーマ切り替えもできる。ブログもサイトの進歩が感じられて面白い",
+    "It's clean and allows for theme switching. The blog is also interesting, showing the site's progress.",
+    "Il est épuré et permet de changer de thème. Le blog est également intéressant, car il présente l'évolution du site."
+  ],
+  link_0027: [
+    "色々なサービスを展開されてる。このサイトのアクセスカウンターもこの方のものを使わさせていただいてます",
+    "They offer a variety of services. I'm even using their access counter for this website.",
+    "Ils proposent divers services. J'utilise même leur compteur d'accès pour ce site web."
+  ],
 
   hist_0001: [
     'HPをリニューアル',
@@ -278,6 +323,11 @@ const translatedText = {
     'Saving theme and language settings',
     'Enregistrement du thème et de la langue'
   ],
+  hist_0019: [
+    `利用規約を追加`,
+    `Add Terms of Use`,
+    `Ajouter des conditions d'utilisation`
+  ],
 
   cont_desc: [
     'Apps ScriptとGoogle Spreadsheetを用いたフォームです。未読メッセージが100件を超えている場合、データの受け取りは拒否されます。バグ報告や相互リンク申請など気軽にどうぞ。',
@@ -318,10 +368,182 @@ const translatedText = {
     'Last updated: ',
     'Dernière mise à jour : '
   ],
-  foot_ga4: [
-    'このサイトはページの改善のためGoogle Analytics 4を用いてユーザーのイベントを解析しています。',
-    "This site uses Google Analytics 4 to analyze user events in order to improve its pages.",
-    "Ce site utilise Google Analytics 4 pour analyser les événements des utilisateurs afin d'améliorer ses pages."
+  foot_term: [
+    "Terms of Service",
+    "Terms of Service",
+    "Conditions d’utilisation"
+  ],
+
+  t1: ["利用規約", "Terms of Services", "Conditions d’utilisation"],
+  t2: [
+    `本利用規約（以下、「本規約」）は、本ウェブサイト（以下、「当サイト」）の利用条件を定めるものです。利用者は、本規約に同意の上で当サイトを利用するものとします。`,
+    `These Terms of Use (hereinafter, "these Terms") govern the terms and conditions for using this website (hereinafter, "this Site"). Users must agree to these Terms before using this Site.`,
+    `Les présentes Conditions d'utilisation (ci-après dénommées « les présentes Conditions ») régissent les modalités d'utilisation du présent site web (ci-après dénommé « le Site »). L'utilisateur doit accepter les présentes Conditions avant d'utiliser le Site.`
+  ],
+  t3: [
+    `第1条（適用の範囲）`,
+    `Article 1 (Scope of Application)`,
+    `Article 1 (Champ d'application)`
+  ],
+  t4: [
+    `本規約は、当サイトが提供するすべての機能およびサービスに適用されます。`,
+    `These Terms and Conditions apply to all features and services provided by this website.`,
+    `Les présentes conditions générales s'appliquent à toutes les fonctionnalités et tous les services fournis par ce site Web.`
+  ],
+  t5: [
+    `第2条（提供サービス）`,
+    `Article 2 (Services Provided)`,
+    `Article 2 (Services fournis)`
+  ],
+  t6: [
+    `当サイトは、運営者が個人的に運営するウェブサイトであり、各種コンテンツおよび機能を提供しています。`,
+    `This website is a personal website operated by the site administrator and provides various content and functions.`,
+    `Ce site web est un site personnel géré par l'administrateur du site et propose divers contenus et fonctionnalités.`
+  ],
+  t7: [
+    `提供される内容および機能は、予告なく追加、変更、または停止される場合があります。`,
+    `The content and features provided may be added, changed, or discontinued without prior notice.`,
+    `Le contenu et les fonctionnalités proposés peuvent être ajoutés, modifiés ou supprimés sans préavis.`
+  ],
+  t8: [
+    `第3条（禁止事項）`,
+    `Article 3 (Prohibited matters)`,
+    `Article 3 (Questions interdites)`
+  ],
+  t9: [
+    `利用者は、以下の行為を行ってはなりません。`,
+    `Users must not engage in the following actions:`,
+    `Les utilisateurs ne doivent pas se livrer aux actions suivantes :`
+  ],
+  t10: [
+    `法令または公序良俗に反する行為`,
+    `Acts that violate laws or public order and morals`,
+    `Actes qui violent les lois ou l'ordre public et les bonnes mœurs`
+  ],
+  t11: [
+    `当サイトの運営を妨害する行為`,
+    `Actions that interfere with the operation of this site`,
+    `Actions qui entravent le fonctionnement de ce site`
+  ],
+  t12: [
+    `不正アクセスやそれを試みる行為`,
+    `Unauthorized access or attempts to do so`,
+    `Accès non autorisé ou tentatives d'accès non autorisé`
+  ],
+  t13: [
+    `問い合わせフォームの悪用（スパム等）`,
+    `Misuse of contact forms (spam, etc.)`,
+    `Utilisation abusive des formulaires de contact (spam, etc.)`
+  ],
+  t14: [
+    `他者に不利益を与える行為`,
+    `Actions that cause harm to others`,
+    `Des actes qui causent du tort aux autres`
+  ],
+  t15: [
+    `第4条（免責事項）`,
+    `Article 4 (Disclaimer)`,
+    `Article 4 (Avertissement)`
+  ],
+  t16: [
+    `当サイトの機能や情報について、その正確性・完全性を保証するものではありません。`,
+    `We do not guarantee the accuracy or completeness of the functions or information on this website.`,
+    `Nous ne garantissons pas l'exactitude ni l'exhaustivité des fonctions ou des informations présentes sur ce site web.`
+  ],
+  t17: [
+    `計算結果や表示内容は参考として提供されるものであり、正確性は保証されません。`,
+    `The calculation results and displayed information are provided for reference only, and their accuracy is not guaranteed.`,
+    `Les résultats des calculs et les informations affichées sont fournis à titre indicatif uniquement, et leur exactitude n'est pas garantie.`
+  ],
+  t18: [
+    `当サイトの利用により生じた損害について、運営者は責任を負いません。`,
+    `The operators of this site are not responsible for any damages incurred as a result of using this site.`,
+    `Les exploitants de ce site ne sont pas responsables des dommages pouvant résulter de l'utilisation de ce site.`
+  ],
+  t19: [
+    `外部サイト（相互リンク先等）の内容について、当サイトは責任を負いません。`,
+    `This site is not responsible for the content of external websites (including those linked to through reciprocal links).`,
+    `Ce site n'est pas responsable du contenu des sites web externes (y compris ceux accessibles par des liens réciproques).`
+  ],
+  t20: [
+    `第5条（著作権・ライセンス）`,
+    `Article 5 (Copyright and License)`,
+    `Article 5 (Droit d'auteur et licence)`
+  ],
+  t21: [
+    `当サイトのコンテンツ（プログラム、文章、デザイン等）は、特に明記がない限り、CC0のもとで提供されています。`,
+    `The content on this site (programs, text, design, etc.) is provided under CC0 unless otherwise specified.`,
+    `Le contenu de ce site (programmes, textes, conception, etc.) est fourni sous licence CC0, sauf indication contraire.`
+  ],
+  t22: [
+    `利用者は当サイトのコンテンツを自由に利用、改変、再配布、商用利用することができます。`,
+    `Users are free to use, modify, redistribute, and commercially use the content on this site.`,
+    `Les utilisateurs sont libres d'utiliser, de modifier, de redistribuer et d'exploiter commercialement le contenu de ce site.`
+  ],
+  t23: [
+    `クレジット表記は不要ですが、任意で記載していただけると幸いです。`,
+    `Credit attribution is not required, but we would appreciate it if you could include it if you wish.`,
+    `L’attribution de la source n’est pas obligatoire, mais nous vous serions reconnaissants de l’inclure si vous le souhaitez.`
+  ],
+  t24: [
+    `画像・バナー・相互リンク先コンテンツなど、第三者に権利があるものについては、この限りではありません。`,
+    `This does not apply to images, banners, reciprocal link content, or other materials whose rights are held by third parties.`,
+    `Ceci ne s'applique pas aux images, bannières, contenus de liens réciproques ou autres éléments dont les droits sont détenus par des tiers.`
+  ],
+  t25: [
+    `第6条（アクセス解析）`,
+    `Article 6 (Access Analysis)`,
+    `Article 6 (Analyse de l'accès)`
+  ],
+  t26: [
+    `当サイトでは、アクセス解析のためにGoogle Analytics 4（GA4）を利用しています。`,
+    `This website uses Google Analytics 4 (GA4) for access analysis.`,
+    `Ce site web utilise Google Analytics 4 (GA4) pour l'analyse des accès.`
+  ],
+  t27: [
+    `このサービスは、トラフィックデータの収集のためにCookie等を使用する場合があります。`,
+    `This service may use cookies and similar technologies to collect traffic data.`,
+    `Ce service peut utiliser des cookies et des technologies similaires pour collecter des données de trafic.`
+  ],
+  t28: [
+    `収集されるデータは匿名であり、個人を特定するものではありません。`,
+    `The data collected is anonymous and does not identify individuals.`,
+    `Les données recueillies sont anonymes et ne permettent pas d'identifier les individus.`
+  ],
+  t29: [
+    `第7条（相互リンク）`,
+    `Article 7 (Mutual Linking)`,
+    `Article 7 (Liaison mutuelle)`
+  ],
+  t30: [
+    `相互リンク先の内容について、当サイトは責任を負いません。`,
+    `This site is not responsible for the content of the linked websites.`,
+    `Ce site n'est pas responsable du contenu des sites web externes.`
+  ],
+  t31: [
+    `相互リンクは運営者の判断により掲載・削除される場合があります。`,
+    `Mutual links may be added or removed at the discretion of the website administrator.`,
+    `Les liens réciproques peuvent être ajoutés ou supprimés à la discrétion de l'administrateur du site web.`
+  ],
+  t32: [
+    `第8条（問い合わせ）`,
+    `Article 8 (Inquiries)`,
+    `Article 8 (Enquêtes)`
+  ],
+  t33: [
+    `問い合わせフォームから送信された内容は、対応目的の範囲内でのみ利用します。`,
+    `The information submitted through the inquiry form will only be used for the purpose of responding to your inquiry.`,
+    `Les informations soumises via le formulaire de demande seront utilisées uniquement dans le but de répondre à votre demande.`
+  ],
+  t34: [
+    `第9条（規約の変更）`,
+    `Article 9 (Amendment of the Regulations)`,
+    `Article 9 (Modification du Règlement)`
+  ],
+  t35: [
+    `本規約は、予告なく変更される場合があります。変更後は掲載時点から効力を持ちます。`,
+    `These terms and conditions may be changed without prior notice. The revised terms will take effect from the time they are published.`,
+    `Les présentes conditions générales peuvent être modifiées sans préavis. Les conditions générales modifiées entreront en vigueur dès leur publication.`
   ]
 };
 let textElements = [];

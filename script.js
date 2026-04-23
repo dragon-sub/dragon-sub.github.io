@@ -1,4 +1,4 @@
-const lastUpdated = '2026/04/18';
+const lastUpdated = '2026/04/24';
 const page = document.querySelector('html');
 const bar = document.getElementById('progressInner');
 const clock = document.getElementById('clock');
@@ -10,6 +10,9 @@ const fakeSubmit = document.getElementById('fakeSubmit');
 fakeSubmit.onclick = () => realSubmit.click();
 const loading = document.querySelector('.loading');
 const fakeTheme = document.querySelector('.theme');
+const openTerms = document.getElementById('openTerms');
+const terms = document.getElementById('term');
+const shadow = document.querySelector('.shadow');
 const endpoint = 'https://script.google.com/macros/s/AKfycbzCpdCKFv_kz4XUXTESFb46pJSjHHD4eRmd77ZCyub4OpitIVYp6UAay0vFls53d9jB/exec';
 fakeTheme.onclick = () => {
   page.classList.toggle('dark');
@@ -17,6 +20,8 @@ fakeTheme.onclick = () => {
     page.classList.contains('dark') ? 'dark' : ''
   );
 }
+openTerms.onclick = () => terms.classList.remove('close');
+shadow.onclick = () => terms.classList.add('close');
 
 function prepareContents() {
   const banner = document.querySelector('.banner');
@@ -124,7 +129,6 @@ function reciprocalLinks() {
       link: 'https://157.f5.si/',
       title: 'ちくにざき',
       info: '自宅鯖でやってるらしい。自分もそういう系の知識を身に着けてみたい',
-      favicon: "img/load.svg",
       banner: 'https://157.f5.si/images/banners/banner-2.png'
     },
     {
@@ -149,8 +153,7 @@ function reciprocalLinks() {
     {
       link: "https://podzol-catenary.github.io/music-website./index.html",
       title: "podzol-catenary",
-      info: "素朴で風情ある街並みの写真が印象的で音楽活動も展開されています。",
-      favicon: "img/load.svg"
+      info: "素朴で風情ある街並みの写真が印象的で音楽活動も展開されています。"
     },
     {
       link: "https://negapainter.work/",
@@ -170,17 +173,73 @@ function reciprocalLinks() {
       title: "まろん｡のポートフォリオ",
       info: "様々な言語を書かれている私の尊敬する方です。羨望の目を向けてばかりではいけませんが。",
       favicon: "https://montblank.fun/icon.png"
+    },
+    {
+      link: "https://t3tra.dev/",
+      title: "t3tra's website - Home",
+      info: "ページを開いた直後の文字のストロークのアニメーションがかっこいい",
+      favicon: "https://t3tra.dev/favicon.ico"
+    },
+    {
+      link: "https://nercone.dev/",
+      title: "nercone's website",
+      info: "カーソルを作るっていう革新的なUIがすごい。ページ遷移の時のフェードも含めて。",
+      favicon: "https://assets.nercone.dev/images/favicon.svg",
+      banner: "https://assets.nercone.dev/images/banner.png"
+    },
+    {
+      link: "https://info.takos.jp/",
+      title: "冨山翔太|たこ",
+      info: "要素のゆらゆらが可愛い。ページをスクロールするにつれて暗くなる作りこみもまた。",
+      favicon: "https://info.takos.jp/icon.jpg"
+    },
+    {
+      link: "https://cotton7.me/",
+      title: "Home | Cotton's website",
+      info: "見た目がミニマルなのにも関わらず情報はしっかりと入っていて取捨選択がすごく上手",
+      favicon: "https://cotton7.me/favicon-light.svg"
+    },
+    {
+      link: "https://akku1139.github.io/",
+      title: "akku's website",
+      info: "配色が落ち着いててバナーが可愛い！",
+      favicon: "https://akku1139.github.io/images/favicon.png",
+      banner: "https://akku1139.github.io/banners/320x100.png"
+    },
+    {
+      link: "https://nakasyou.how/",
+      title: "Shotaro Nakamura / nakasyou",
+      info: "大会記録とか資格とかいっぱい持ってるすごい人のすごいサイト。"
+    },
+    {
+      link: "https://sinta.fun/",
+      title: "sugimoto",
+      info: "見た目も内容も面白い。ブログもあるみたい",
+      favicon: "https://sinta.fun/icon6.png"
+    },
+    {
+      link: "https://neutral-human.net/",
+      title: "Home - The Neutral World",
+      info: "すっきりしていてテーマ切り替えもできる。ブログもサイトの進歩が感じられて面白い",
+      banner: "https://neutral-human.net/img/banner.svg"
+    },
+    {
+      link: "https://nanasi-rasi.net/",
+      title: "ななしぃ トップページ",
+      info: "色々なサービスを展開されてる。このサイトのアクセスカウンターもこの方のものを使わさせていただいてます",
+      favicon: "https://nanasi-rasi.net/favicon.ico"
     }
   ];
   let links = "";
   linksData.forEach((site, i) => {
     const idy = 'link_' + String(i + 1).padStart(4, '0');
     const bannerImage = `<img src="${site.banner}" class="linkBanner">`;
+    const favicon = site.favicon ? site.favicon : "img/earth.svg";
     links += `
 <div class="gridInner">
   <a href="${site.link}">
     <div style="display: flex; width: 100%">
-      <img src="${site.favicon}" class="linkFavicon">
+      <img src="${favicon}" class="linkFavicon">
       <div style="flex: 1;">${site.banner ? bannerImage : ""}</div>
     </div>
     <span>${site.title}<i-e /></span>
@@ -231,6 +290,12 @@ function history() {
         {date: '26', info: '相互リンク用バナーを作成'},
         {date: '28', info: '一部多言語対応化'},
         {date: '30', info: 'テーマ・言語を保存するように'}
+      ]
+    },
+    {
+      month: '2026.04',
+      things: [
+        {date: '24', info: '利用規約を追加'}
       ]
     }
   ];

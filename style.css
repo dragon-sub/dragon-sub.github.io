@@ -29,7 +29,7 @@ html body {
   --theme-image: url(img/light.svg);
   --selection: #dbedff;
   --button-hover: #f6f6f6;
-  --shadow: rgba(255, 255, 255, 0.5);
+  --shadow: rgba(0, 0, 0, 0.5);
 }
 
 :root.dark {
@@ -49,7 +49,6 @@ html body {
   --theme-image: url(img/dark.svg);
   --selection: #506f8e;
   --button-hover: #666;
-  --shadow: rgba(0, 0, 0, 0.5);
 }
 
 .theme {
@@ -700,7 +699,9 @@ pre {
 }
 
 .linkBanner {
+  object-fit: contain;
   width: 100%;
+  height: 100%;
 }
 
 .gridInner a {
@@ -729,4 +730,48 @@ pre {
 
 .p {
   margin: 20px 0;
+}
+
+.shadow {
+  background-color: var(--shadow);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999999999999999999;
+  transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  opacity: 1;
+}
+
+.terms {
+  height: 60vh;
+  width: calc(100% - 40px);
+  position: fixed;
+  z-index: 1000000000000000000;
+  bottom: 0;
+  background-color: var(--input);
+  transition:
+    height 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+    padding 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  color: var(--section-text);
+  padding: 20px;
+  font-size: 16px;
+  overflow-y: auto;
+}
+
+.close .shadow {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.close .terms {
+  height: 0;
+  padding: 0 20px;
+}
+
+.tt1 {
+  font-size: 24px;
+}
+
+.tt2 {
+  font-size: 22px;
 }
