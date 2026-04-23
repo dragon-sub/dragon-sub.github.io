@@ -203,9 +203,9 @@ const translatedText = {
     "Le mouvement des éléments est adorable. J'aime aussi la façon dont la page s'assombrit lorsqu'on la fait défiler."
   ],
   link_0022: [
-    "見た目がミニマルなのにも関わらず情報はしっかりと入っていて取捨選択がすごく上手",
-    "Despite its minimalist appearance, it contains plenty of information, demonstrating excellent selection and omission.",
-    "Malgré son apparence minimaliste, il contient une mine d'informations, témoignant d'une excellente sélection et d'une parfaite maîtrise des omissions."
+    "HTML4.01で書かれているそうです。数学のこととか到底理解に及ばない",
+    "It seems to be written in HTML 4.01. I have absolutely no understanding of the mathematics involved.",
+    "Il semble que ce soit écrit en HTML 4.01. Je ne comprends absolument rien aux mathématiques sous-jacentes."
   ],
   link_0023: [
     "配色が落ち着いててバナーが可愛い！",

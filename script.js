@@ -194,10 +194,10 @@ function reciprocalLinks() {
       favicon: "https://info.takos.jp/icon.jpg"
     },
     {
-      link: "https://cotton7.me/",
-      title: "Home | Cotton's website",
-      info: "見た目がミニマルなのにも関わらず情報はしっかりと入っていて取捨選択がすごく上手",
-      favicon: "https://cotton7.me/favicon-light.svg"
+      link: "https://x0w.ct.ws/tw_profile/",
+      title: "@ryqjufq0xfffrog's homepage",
+      info: "HTML4.01で書かれているそうです。数学のこととか到底理解に及ばない",
+      favicon: "https://avatars.githubusercontent.com/u/168338664?v=4"
     },
     {
       link: "https://akku1139.github.io/",
