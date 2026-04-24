@@ -1,10 +1,34 @@
 const formula = document.getElementById('formula');
 const answer = document.getElementById('answer');
 const arg0 = ['pi', 'e']
-const arg1 = ['sqrt', 'sin', 'cos', 'tan', 'abs', 'asin', 'acos', 'atan', 'sinh', 'cosh', 'tanh', 'log', 'attenRate'];
+const arg1 = ['sqrt', 'sin', 'cos', 'tan', 'abs', 'asin', 'acos', 'atan', 'sinh', 'cosh', 'tanh', 'log', 'attenRate', 'toCup', 'fromCup'];
 const arg2 = ['max', 'min', 'gcd', 'lcm'];
 const funs = arg0.concat(arg1, arg2);
 let string = false;
+const cupTable = {
+  "0": "カプ",
+  "1": "力プ",
+  "2": "カプ",
+  "3": "プカ",
+  "4": "ｶプ",
+  "5": "カﾌﾟ",
+  "6": "ｶﾌﾟ",
+  "7": "力プ",
+  "8": "カㇷ゜",
+  "9": "力ㇷ゜"
+};
+const cupTable2 = {
+   "カプ": "0",
+   "力プ": "1",
+   "カプ": "2",
+   "プカ": "3",
+   "ｶプ": "4",
+   "カﾌﾟ": "5",
+   "ｶﾌﾟ": "6",
+   "力プ": "7",
+   "カㇷ゜": "8",
+   "力ㇷ゜": "9"
+};
 
 async function evaluate(input) {
   string = false;
@@ -93,6 +117,8 @@ async function evaluate(input) {
       if (l == 'tanh') calc.push(Math.tanh(a));
       if (l == 'log') calc.push(Math.log(a));
       if (l == 'attenRate') calc.push(await attenRate(normalize(a)));
+      if (l == 'toCup') calc.push(toCup(normalize(a)));
+      if (l == 'fromCup') calc.push(fromCup(normalize(a)));
     };
     if (arg0.includes(lastChar)) {
       l = calc.pop();
@@ -165,4 +191,31 @@ async function attenRate(user) {
       const days = difMs / 86400000;
       return posts / days;
     });
+}
+
+function toCup(s) {
+  const chars = [...s];
+  const result = [];
+  chars.forEach(char => {
+    const nums = [...String(char.charCodeAt(0))];
+    let translated = [];
+    nums.forEach(num => {
+      translated.push(cupTable[num]);
+    });
+    result.push(translated.join(' '));
+  });
+  return result.join('、')+'。';
+}
+
+function fromCup(s) {
+  let result = '';
+  const chars = s.slice(0, -1).split('、');
+  chars.forEach(char => {
+    let charCode = '';
+    char.split(' ').forEach(sp => {
+      charCode += cupTable2[sp];
+    });
+    result += String.fromCharCode(+charCode);
+  });
+  return result;
 }
