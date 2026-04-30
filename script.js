@@ -228,6 +228,12 @@ function reciprocalLinks() {
       title: "ななしぃ トップページ",
       info: "色々なサービスを展開されてる。このサイトのアクセスカウンターもこの方のものを使わさせていただいてます",
       favicon: "https://nanasi-rasi.net/favicon.ico"
+    },
+    {
+      link: "https://ryopc.qzz.io/",
+      title: "ryopc公式ホームページ | ryopcの公式ホームページ",
+      info: "小学生の方が運営されているそうです。能力が年齢を超越してる",
+      favicon: "https://ryopc.qzz.io/wp-content/uploads/2026/04/cropped-Ryopc%E6%96%B0%E3%81%97%E3%81%84%E3%83%AD%E3%82%B4-32x32.png"
     }
   ];
   let links = "";

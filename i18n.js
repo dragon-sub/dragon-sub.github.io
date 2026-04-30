@@ -232,6 +232,11 @@ const translatedText = {
     "They offer a variety of services. I'm even using their access counter for this website.",
     "Ils proposent divers services. J'utilise même leur compteur d'accès pour ce site web."
   ],
+  link_0028: [
+    "小学生の方が運営されているそうです。能力が年齢を超越してる",
+    "Apparently, it's run by elementary school students. Their abilities transcend their age.",
+    "Apparemment, ce sont des élèves de primaire qui gèrent l'établissement. Leurs capacités sont remarquables pour leur âge."
+  ],
 
   hist_0001: [
     'HPをリニューアル',
