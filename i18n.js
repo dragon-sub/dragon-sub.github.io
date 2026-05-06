@@ -29,9 +29,9 @@ const translatedText = {
   ],
   prof_self: ['Self Introduction', 'Self Introduction', 'Présentation personnelle'],
   prof_0002: [
-    'プログラミング・言語学・音声学・ルービックキューブに興味がある椎名林檎・東京事変オタクです。今は日本語・中国語・英語・フランス語・スペイン語を学んでいます。',
-    "I'm a Sheena Ringo and Tokyo Jihen geek interested in programming, linguistics, phonetics, and Rubik's Cubes. Currently, I'm studying Japanese, Chinese, English, French, and Spanish.",
-    "Je suis un passionné de Sheena Ringo et Tokyo Jihen, intéressé par la programmation, la linguistique, la phonétique et le Rubik's Cube. J'étudie actuellement le japonais, le chinois, l'anglais, le français et l'espagnol."
+    'プログラミング・言語学・音声学・ルービックキューブに興味がある椎名林檎・東京事変オタクです。今は日本語・中国語・英語・フランス語・スペイン語・トルコ語を学んでいます。',
+    "I'm a Sheena Ringo and Tokyo Jihen geek interested in programming, linguistics, phonetics, and Rubik's Cubes. Currently, I'm studying Japanese, Chinese, English, French, Spanish, and Turkish.",
+    "Je suis un passionné de Sheena Ringo et Tokyo Jihen, intéressé par la programmation, la linguistique, la phonétique et le Rubik's Cube. J'étudie actuellement le japonais, le chinois, l'anglais, le français, l'espagnol, et le turc."
   ],
   prof_reco: ['Recommended Song', 'Recommended Song', 'Chanson recommandée'],
   changeSong: ['Change Song', 'Change Song', 'Changer la chanson'],
@@ -48,9 +48,9 @@ const translatedText = {
     'Développement de la langue construite « @ski »'
   ],
   workOn_0002: [
-    '日, 中, 英, 仏, 西の勉強',
-    'Studying JA, ZH, EN, FR, ES',
-    'Étude du JA, ZH, EN, FR, ES'
+    '日, 中, 英, 仏, 西, 土の勉強',
+    'Studying JA, ZH, EN, FR, ES, TR',
+    'Étude du JA, ZH, EN, FR, ES, TR'
   ],
 
   work_titl: ['Works', 'Works', 'Réalisations'],
@@ -236,6 +236,51 @@ const translatedText = {
     "小学生の方が運営されているそうです。能力が年齢を超越してる",
     "Apparently, it's run by elementary school students. Their abilities transcend their age.",
     "Apparemment, ce sont des élèves de primaire qui gèrent l'établissement. Leurs capacités sont remarquables pour leur âge."
+  ],
+  link_0029: [
+    "配置がまとまっていてすっきりとしたサイトです。セキュリティ関連に強そう",
+    "This site has a well-organized and clean layout. It seems to be strong in security-related matters.",
+    "Ce site présente une mise en page claire et bien organisée. Il semble être très performant en matière de sécurité."
+  ],
+  link_0030: [
+    "全部がかっこいいです。アニメーションも、コマンドも、配色も。全部。",
+    "Everything is cool. The animations, the commands, the color scheme. Everything.",
+    "Tout est super. Les animations, les commandes, les couleurs. Absolument tout."
+  ],
+  link_0031: [
+    "すごくかっこいい場所に所属されている方です。ブログも更新されているようなので是非確認してみては。",
+    "This person belongs to a really cool organization. They also seem to update their blog, so you should definitely check it out.",
+    "Cette personne fait partie d'une organisation vraiment géniale. Elle semble aussi mettre à jour son blog, alors n'hésitez pas à y jeter un œil."
+  ],
+  link_0032: [
+    "すごくモダンなサイトでどこから話せばよいか戸惑うほどです。完成度が高すぎます。",
+    "It's such a modern site that I'm at a loss for words. It's incredibly well-designed.",
+    "Ce site est tellement moderne que je suis sans voix. Son design est tout simplement exceptionnel."
+  ],
+  link_0033: [
+    "すごく3Dを感じるサイトです。HTMLでこんなことができることを初めて知りました",
+    "This website has a really strong 3D feel. I never knew you could do something like this with HTML.",
+    "Ce site web donne vraiment une impression de 3D. Je ne savais pas qu'on pouvait faire ça avec du HTML."
+  ],
+  link_0034: [
+    "ガジェットがすごいのは伝わってくるのですが知識不足のせいで理解しきれないのが悔しいところです。",
+    "I can tell the gadgets are amazing, but it's frustrating that my lack of knowledge prevents me from fully understanding them.",
+    "Je vois bien que ces gadgets sont extraordinaires, mais c'est frustrant que mon manque de connaissances m'empêche de les comprendre pleinement."
+  ],
+  link_0035: [
+    "透明感のあるページデザインで、4か国語に切り替えられる点が印象的です。",
+    "The transparent page design and the ability to switch between four languages ​​are particularly impressive.",
+    "La conception transparente des pages et la possibilité de basculer entre quatre langues sont particulièrement impressionnantes."
+  ],
+  link_0036: [
+    "セクション遷移の時のアニメーションが洗練されています。",
+    "The animations during section transitions are sophisticated.",
+    "Les animations lors des transitions de section sont sophistiquées."
+  ],
+  link_0037: [
+    "AppleやNASA、電話番号まで、幅広い記事を書かれています。",
+    "They write articles on a wide range of topics, from Apple and NASA to phone numbers.",
+    "Ils rédigent des articles sur une grande variété de sujets, allant d'Apple et de la NASA aux numéros de téléphone."
   ],
 
   hist_0001: [

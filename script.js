@@ -1,4 +1,4 @@
-const lastUpdated = '2026/04/24';
+const lastUpdated = '2026/05/07';
 const page = document.querySelector('html');
 const bar = document.getElementById('progressInner');
 const clock = document.getElementById('clock');
@@ -234,6 +234,65 @@ function reciprocalLinks() {
       title: "ryopc公式ホームページ | ryopcの公式ホームページ",
       info: "小学生の方が運営されているそうです。能力が年齢を超越してる",
       favicon: "https://ryopc.qzz.io/wp-content/uploads/2026/04/cropped-Ryopc%E6%96%B0%E3%81%97%E3%81%84%E3%83%AD%E3%82%B4-32x32.png"
+    },
+    {
+      link: "https://techfish.dev/",
+      title: "さかなのサイト",
+      info: "配置がまとまっていてすっきりとしたサイトです。セキュリティ関連に強そう",
+      favicon: "https://techfish.dev/favicon.ico",
+      banner: "https://cdn.sakana11.org/banner.jpg"
+    },
+    {
+      link: "https://371tti.net/",
+      title: "Top Page - 371tti.net",
+      info: "全部がかっこいいです。アニメーションも、コマンドも、配色も。全部。",
+      favicon: "https://371tti.net/favicon.ico",
+      banner: "https://371tti.net/banner.gif"
+    },
+    {
+      link: "https://ctes091x.net/",
+      title: "トップページ - 綿糸てせ",
+      info: "すごくかっこいい場所に所属されている方です。ブログも更新されているようなので是非確認してみては。",
+      favicon: "https://ctes091x.net/favicon.ico"
+    },
+    {
+      link: "https://m4gu.dev/",
+      title: "m4gu | Portfolio",
+      info: "すごくモダンなサイトでどこから話せばよいか戸惑うほどです。完成度が高すぎます。",
+      favicon: "https://m4gu.dev/favicon.ico",
+      banner: "https://m4gu.dev/magu.png"
+    },
+    {
+      link: "https://serken.tech/",
+      title: "Kentaro Yamamoto - Profile",
+      info: "すごく3Dを感じるサイトです。HTMLでこんなことができることを初めて知りました",
+      favicon: "https://serken.tech/assets/image.webp",
+      banner: "https://serken.tech/assets/banner.webp"
+    },
+    {
+      link: "https://kotosan-page.pages.dev/",
+      title: "kotosan_dayoのホームページ",
+      info: "ガジェットがすごいのは伝わってくるのですが知識不足のせいで理解しきれないのが悔しいところです。",
+      favicon: "https://github.com/kotosan-dayo/Kotosan-page/blob/main/images/tab%20icon.jpg?raw=true"
+    },
+    {
+      link: "https://site.l-ituki8000.workers.dev/",
+      title: "一樹 / いつき / Ituki",
+      info: "透明感のあるページデザインで、4か国語に切り替えられる点が印象的です。",
+      favicon: "https://site.l-ituki8000.workers.dev/icon.png",
+      banner: "https://l-ituki8000.f5.si/images/slink.png"
+    },
+    {
+      link: "https://soichi-portfolio.soichi1208.workers.dev/",
+      title: "Soichi",
+      info: "セクション遷移の時のアニメーションが洗練されています。",
+      favicon: "img/earth.svg"
+    },
+    {
+      link: "https://marunoringo8.blogspot.com/",
+      title: "マルノリンゴ",
+      info: "AppleやNASA、電話番号まで、幅広い記事を書かれています。",
+      favicon: "https://marunoringo8.blogspot.com/favicon.ico"
     }
   ];
   let links = "";
