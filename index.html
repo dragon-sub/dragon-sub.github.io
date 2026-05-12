@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja" class="noTransition">
+<html lang="ja" class="noTransition loading">
   <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJRV4E66D0"></script>
@@ -56,17 +56,16 @@
         <div class="languageSelector"></div>
       </div>
     </div>
+    <div class="shadowLoading"></div>
     <header>
-      <div class="headerWrapper" id="headerWrapper" style="background-color: rgba(255, 255, 255, 1)">
-        <div class="headerBanner" id="head_titl">Jüw's Page</div>
-        <div class="accesses" id="accesses"><span id="count"></span><span id="head_acce"> Accesses</span></div>
-        <svg class="clock" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" id="clock">
-          <circle cx="50" cy="50" r="49" fill="rgba(255, 255, 255, 0.3)" stroke="#fff" stroke-width="1" />
-          <rect x="49.5" y="15" width="1" height="35" fill="#fff" id="minute" transform="rotate(0 50 50)" />
-          <rect x="49.25" y="10" width="0.5" height="40" fill="#fff" id="second" transform="rotate(0 50 50)" />
-          <rect x="49.25" y="25" width="1.5" height="25" fill="#fff" id="hour" transform="rotate(0 50 50)" />
-        </svg>
-      </div>
+      <div class="headerBanner" id="head_titl">Jüw's Page</div>
+      <div class="accesses" id="accesses"><span id="count"></span><span id="head_acce"> Accesses</span></div>
+      <svg class="clock" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" id="clock">
+        <circle cx="50" cy="50" r="49" fill="rgba(255, 255, 255, 0.3)" stroke="#fff" stroke-width="1" />
+        <rect x="49.5" y="15" width="1" height="35" fill="#fff" id="minute" transform="rotate(0 50 50)" />
+        <rect x="49.25" y="10" width="0.5" height="40" fill="#fff" id="second" transform="rotate(0 50 50)" />
+        <rect x="49.25" y="25" width="1.5" height="25" fill="#fff" id="hour" transform="rotate(0 50 50)" />
+      </svg>
     </header>
     <nav class="nav" id="nav">
       <a class="banner" href="#top" id="nav_top">Jüw's Page</a>
@@ -147,7 +146,7 @@
         <a href="https://drsb.f5.si"><img src="img/banner.png" alt="ゆーのホームページ" width="140"></a>
         <pre>
 &lt;a href=&quot;https://drsb.f5.si&quot;&gt;&lt;img src=&quot;https://drsb.f5.si/img/banner.png&quot; alt=&quot;ゆーのホームページ&quot; width=&quot;140&quot;&gt;&lt;/a&gt;</pre>
-        <div class="st3" id="link_link">Links</div>
+        <div class="st3"><span id="link_link">Links</span> (<span id="linksTotal"></span>)</div>
         <div id="reciprocalLinks" class="gridContainer"></div>
         <p class="p"><span id="link_welc">絶賛募集中です。</span><a href="#contact" id="link_here">ここ</a><span id="link_dozo">からどうぞ。</span></p>
         <div class="st2">Webring</div>
@@ -199,7 +198,7 @@
           <span id="foot_0005"> icon by </span>
           <a href="https://icons8.com/">icons8<i-e /></a>
         </p>
-        <p><a id="openTerms"><span id="foot_term">Terms of Service</span><i-e/></a></p>
+        <p><a id="openTerms" href="javascript:void(0);"><span id="foot_term">Terms of Service</span><i-e/></a></p>
         <p><span id="foot_0006">Last updated: </span><span id="lastUpdated"></span></p>
       </div>
       <div class="footerLogo">

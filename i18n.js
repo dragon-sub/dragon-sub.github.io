@@ -282,6 +282,26 @@ const translatedText = {
     "They write articles on a wide range of topics, from Apple and NASA to phone numbers.",
     "Ils rédigent des articles sur une grande variété de sujets, allant d'Apple et de la NASA aux numéros de téléphone."
   ],
+  link_0038: [
+    "このサイトは比にならないほどデザインが素晴らしいです。ウェブデザインで賞を取られているそうです。同い年とは到底思えません",
+    "This site has an incomparably amazing design. Apparently, they've won awards for web design. It's hard to believe we're the same age.",
+    "Ce site a un design absolument incroyable. Apparemment, ils ont remporté des prix de conception web. Difficile de croire que nous avons le même âge."
+  ],
+  link_0039: [
+    "自宅鯖で運営しているそうです。フォントもレイアウトもすっきりしていて見やすいサイトです",
+    "It seems to be running on a home server. The fonts and layout are clean, making the site easy to read.",
+    "Il paraît que c'est hébergé sur un serveur domestique. La police et la mise en page sont épurées, ce qui rend le site facile à lire."
+  ],
+  link_0040: [
+    "ブロック崩しやメモ帳、テキストエディタなど、様々なツールを公開されています。",
+    "They have released various tools, including a brick breaker game, a notepad, and a text editor.",
+    "L'auteur a publié divers outils, tels qu'un jeu de casse-briques, un bloc-notes et un éditeur de texte."
+  ],
+  link_0041: [
+    "グレースケールの落ち着いた配色で大人っぽいデザインのサイトです。ブログやATSLINKなど、様々なサービスも提供されています。",
+    "The site has a mature design with a calm grayscale color scheme. They also offer various services such as a blog and ATSLINK.",
+    "C'est un site au design mature avec une palette de couleurs grises apaisantes. Divers services, comme un blog et ATSLINK, sont également proposés."
+  ],
 
   hist_0001: [
     'HPをリニューアル',

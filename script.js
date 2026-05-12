@@ -1,4 +1,4 @@
-const lastUpdated = '2026/05/07';
+const lastUpdated = '2026/05/12';
 const page = document.querySelector('html');
 const bar = document.getElementById('progressInner');
 const clock = document.getElementById('clock');
@@ -22,12 +22,14 @@ fakeTheme.onclick = () => {
 }
 openTerms.onclick = () => terms.classList.remove('close');
 shadow.onclick = () => terms.classList.add('close');
+let transition = true;
 
 function prepareContents() {
   const banner = document.querySelector('.banner');
-  const headerWrapper = document.getElementById('headerWrapper');
-  const items = document.querySelectorAll('.nav li')
+  const items = document.querySelectorAll('.nav li');
 
+  toggleThemeQuickly();
+  transition = false;
   reciprocalLinks();
   history();
   updateProgress();
@@ -50,13 +52,14 @@ function prepareContents() {
 
   banner.style.opacity = 1;
   banner.style.transform = 'none';
-  headerWrapper.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+  page.classList.remove('loading');
 
   items.forEach((li, i) => {
-    li.style.transitionDelay = `${i * 0.1 + 0.5}s`;
+    li.style.transitionDelay = `${i * 0.1 + 1.1}s`;
     li.style.opacity = 1;
     li.style.transform = 'none';
   });
+  transition = true;
 }
 
 function reciprocalLinks() {
@@ -286,15 +289,43 @@ function reciprocalLinks() {
       link: "https://soichi-portfolio.soichi1208.workers.dev/",
       title: "Soichi",
       info: "セクション遷移の時のアニメーションが洗練されています。",
-      favicon: "img/earth.svg"
+      favicon: "img/earth.svg",
+      banner: "https://soichi-portfolio.soichi1208.workers.dev/header.svg"
     },
     {
       link: "https://marunoringo8.blogspot.com/",
       title: "マルノリンゴ",
       info: "AppleやNASA、電話番号まで、幅広い記事を書かれています。",
       favicon: "https://marunoringo8.blogspot.com/favicon.ico"
+    },
+    {
+      link: "https://yoru.is-a.tokyo/",
+      title: "或いは夜 - AruihaYoru | ポータルページ",
+      info: "このサイトは比にならないほどデザインが素晴らしいです。ウェブデザインで賞を取られているそうです。同い年とは到底思えません",
+      favicon: "https://yoru.is-a.tokyo/favicon.ico",
+      banner: "https://yoru.is-a.tokyo/banner.png"
+    },
+    {
+      link: "https://linkserver.jp/",
+      title: "Home | LinkServer",
+      info: "自宅鯖で運営しているそうです。フォントもレイアウトもすっきりしていて見やすいサイトです",
+      favicon: "https://linkserver.jp/img/favicon.ico",
+      banner: "https://linkserver.jp/banner.JPG"
+    },
+    {
+      link: "https://soyaakinohara.net/",
+      title: "秋ノ原窓也のホームページ",
+      info: "ブロック崩しやメモ帳、テキストエディタなど、様々なツールを公開されています。",
+      favicon: "img/earth.svg"
+    },
+    {
+      link: "https://global.atserver186.jp/",
+      title: "ATSERVER",
+      info: "グレースケールの落ち着いた配色で大人っぽいデザインのサイトです。ブログやATSLINKなど、様々なサービスも提供されています。",
+      favicon: "https://global.atserver186.jp/_app/immutable/assets/favicon.DuSRfhJ2.png"
     }
   ];
+  document.getElementById('linksTotal').innerText = linksData.length;
   let links = "";
   linksData.forEach((site, i) => {
     const idy = 'link_' + String(i + 1).padStart(4, '0');
@@ -474,11 +505,15 @@ function togglePopup() {
   shadow.classList.add('noShadow');
 }
 
+function toggleThemeQuickly() {
+  if (transition) {
+    page.classList.add('noTransition');
+    loadTheme();
+    page.classList.remove('noTransition');
+  }
+}
+
+window.addEventListener('pageshow', toggleThemeQuickly);
 window.addEventListener('load', prepareContents);
-window.addEventListener('pageshow', () => {
-  page.classList.add('noTransition');
-  loadTheme();
-  page.classList.remove('noTransition');
-});
 
 window.setInterval(updateClock, 1000);
